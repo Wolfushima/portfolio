@@ -1,10 +1,17 @@
 import React from 'react';
+import Header from './components/Header';
+import Home from './components/Home';
+import AboutMe from './components/AboutMe';
 
 function App() {
   return (
-    <div>
-      <p>Initial</p>
-    </div>
+    <>
+      <Header />
+      <main>
+        <Home />
+        <AboutMe />
+      </main>
+    </>
   );
 }
 
