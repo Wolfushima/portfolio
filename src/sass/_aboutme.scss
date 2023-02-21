@@ -17,10 +17,8 @@
     align-items: center;
   }
   &__header {
-    font-family: 'Montserrat', sans-serif;
     h3 {
-      font-weight: 700;
-      letter-spacing: 5px;
+      @include h3($dark-grey-text)
     }
   }
   &__description {
@@ -28,7 +26,7 @@
     width: 60%;
     font-size: $font-sm;
     max-width: 1440px;
-    margin: 3.5rem 0 3rem 0;
+    margin: 0 0 3rem 0;
     line-height: 2;
     @include breakpoint-up(x-large) {
       padding: 0 5rem;
