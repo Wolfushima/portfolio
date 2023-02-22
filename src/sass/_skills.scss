@@ -1,0 +1,99 @@
+.skills {
+  background: $bg-light;
+  &__wrapper {
+    max-width: 1440px;
+    padding: 5rem;
+    margin: 0 auto;
+    @include breakpoint-down(medium) {
+      padding: 5rem 3rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 5rem 2rem;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__header {
+    h3 {
+      @include h3($dark-grey-text)
+    }
+  }
+  &__skills {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 0.5rem;
+    @include breakpoint-down(x-small) {
+      grid-template-columns: repeat(1, auto);
+    }
+  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    gap: 1rem;
+    @include breakpoint-down(medium) {
+      padding: 1rem;
+    }
+    h5 {
+      font-family: 'Manrope', sans-serif;
+      letter-spacing: 3px;
+      font-size: $font-med;
+      color: $light-grey-text;
+      @include breakpoint-down(medium) {
+        font-size: $font-sm;
+      }
+    }
+  }
+  &__box-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    @include breakpoint-down(medium) {
+      padding: 1rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 0.5rem;
+      gap: 1rem;
+    }
+  }
+  &__skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    @include breakpoint-down(medium) {
+      gap: 0.5rem;
+    }
+    p {
+      font-family: 'Open Sans', sans-serif;
+      font-size: $font-xsm;
+      color: $light-grey-text;
+    }
+  }
+  &__logo {
+    height: 4rem;
+    max-height: 4rem;
+    @include breakpoint-down(medium) {
+      height: 3rem;
+      max-height: 3rem;
+    }
+    @include breakpoint-down(small) {
+      height: 2rem;
+      max-height: 2rem;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
