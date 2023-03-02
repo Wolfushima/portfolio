@@ -1,10 +1,12 @@
 .header {
-  position: absolute;
-  min-width: 100%;
+  min-width: 320px;
+  position: fixed;
   width: 100%;
   min-height: 60px;
   height: 60px;
   color: $light-text;
+  background: $bg-grey-dark;
+  border-bottom: 1px solid $light-grey-text;
   &__wrapper {
     max-width: 1440px;
     padding: 0 5rem;
@@ -17,8 +19,12 @@
       padding: 0 2rem;
     }
   }
-  p {
+  &__logo {
+    color: $light-text;
     font-family: 'Mate SC', serif;
+    background: transparent;
+    border: none;
+    cursor: pointer;
   }
   &__container {
     display: flex;
@@ -27,16 +33,119 @@
     align-items: center;
     height: 100%;
   }
-  ul {
+  ul {    
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
     list-style: none;
-    font-size: $font-sm;
     gap: 20px;
+    text-decoration: none;
+    @include breakpoint-down(small) {
+      transition: all 0.3s ease;
+      flex-direction: column;
+      justify-content: flex-start;
+      background: #00000094;
+      backdrop-filter: blur(2px);
+      height: 100%;
+      position: absolute;
+      right: -200px;
+      top: 0;
+      padding: 80px 2rem 0 2rem;
+      height: 100vh;
+      width: 200px;
+    }
     li {
-      cursor: pointer;
+      button {
+        font-size: $font-sm;
+        background: none;
+        color: $light-text;
+        border: none;
+        cursor: pointer;
+        font-family: 'Manrope', sans-serif;
+        font-family: 'Montserrat', sans-serif;
+        &:hover {
+          color: darken($light-text, 5%);
+        }
+      }
+    }
+  }
+  ul.expanded {
+    right: 0;
+  }
+  &__hamburger.button {
+    transform: scale(0.7);
+  }
+  &__hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    z-index: 9999;
+    width: 30px;
+    height: 22.5px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    @include breakpoint-down(small) {
+      display: block;
+    }
+    span {
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background: $light-text;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: .25s ease-in-out;
+      -moz-transition: .25s ease-in-out;
+      -o-transition: .25s ease-in-out;
+      transition: .25s ease-in-out;
+    }
+    span:nth-child(1) {
+      top: 0px;
+    }
+    span:nth-child(2),
+    span:nth-child(3) {
+      top: 9px;
+    }
+    span:nth-child(4) {
+      top: 18px;
+    }
+  }
+  &__hamburger.open {
+    span:nth-child(1) {
+      top: 18px;
+      width: 0%;
+      left: 50%;
+    }
+    span:nth-child(2) {
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+    span:nth-child(3) {
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+    }
+    span:nth-child(4) {
+      top: 18px;
+      width: 0%;
+      left: 50%;
     }
   }
 }
