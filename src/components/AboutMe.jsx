@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Deer from '../assets/aboutme/deer.png';
+import Deer from '../assets/aboutme/deer.jpg';
 import Polar from '../assets/aboutme/polar.jpg';
-import Bird from '../assets/aboutme/bird.png';
-import Dolphin from '../assets/aboutme/dolphin.png';
+import Bird from '../assets/aboutme/bird.jpg';
+import Dolphin from '../assets/aboutme/dolphin.jpg';
 
 const boxVariants = {
   visible: { opacity: 1, scale: 1 },
