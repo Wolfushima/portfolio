@@ -7,6 +7,7 @@
   color: $light-text;
   background: $bg-grey-dark;
   border-bottom: 1px solid $light-grey-text;
+  z-index: 9999;
   &__wrapper {
     max-width: 1440px;
     padding: 0 5rem;
