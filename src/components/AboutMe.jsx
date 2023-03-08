@@ -1,8 +1,29 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import Deer from '../assets/aboutme/deer.png';
 import Polar from '../assets/aboutme/polar.jpg';
 import Bird from '../assets/aboutme/bird.png';
 import Dolphin from '../assets/aboutme/dolphin.png';
+
+const boxVariants = {
+  visible: { opacity: 1, scale: 1 },
+  hidden: { opacity: 0, scale: 0 },
+};
+
+const AboutMeImage = ({ imageSrc, imageAlt }) => (
+  <div className="aboutme__image">
+    <motion.img
+      src={imageSrc}
+      alt={imageAlt}
+      whileHover={{ scale: 1.3 }}
+      transition={{
+        type: 'spring',
+        stiffness: 300,
+        damping: 30,
+      }}
+    />
+  </div>
+);
 
 const AboutMe = () => (
   <section id="aboutme" className="aboutme">
@@ -21,7 +42,14 @@ const AboutMe = () => (
             to take on new challenges in the world of web development.
           </p>
         </div>
-        <div className="aboutme__extra">
+        <motion.div
+          className="aboutme__extra"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ type: 'tween', duration: 0.7 }}
+          variants={boxVariants}
+        >
           <div className="aboutme__extra-description">
             <p>
               In addition to web development, I have a strong creative side that
@@ -29,20 +57,24 @@ const AboutMe = () => (
             </p>
           </div>
           <div className="aboutme__images">
-            <div className="aboutme__image">
-              <img src={Deer} alt="Deer - Wolfushima Original Artwork" />
-            </div>
-            <div className="aboutme__image">
-              <img src={Polar} alt="Polar - Wolfushima Original Artwork" />
-            </div>
-            <div className="aboutme__image">
-              <img src={Bird} alt="Bird - Wolfushima Original Artwork" />
-            </div>
-            <div className="aboutme__image">
-              <img src={Dolphin} alt="Dolphin - Wolfushima Original Artwork" />
-            </div>
+            <AboutMeImage
+              imageSrc={Deer}
+              imageAlt="Deer - Wolfushima Original Artwork"
+            />
+            <AboutMeImage
+              imageSrc={Polar}
+              imageAlt="Polar - Wolfushima Original Artwork"
+            />
+            <AboutMeImage
+              imageSrc={Bird}
+              imageAlt="Bird - Wolfushima Original Artwork"
+            />
+            <AboutMeImage
+              imageSrc={Dolphin}
+              imageAlt="Dolphin - Wolfushima Original Artwork"
+            />
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   </section>
