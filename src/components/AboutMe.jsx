@@ -5,13 +5,27 @@ import Polar from '../assets/aboutme/polar.jpg';
 import Bird from '../assets/aboutme/bird.jpg';
 import Dolphin from '../assets/aboutme/dolphin.jpg';
 
-const boxVariants = {
+const imageVariants = {
   visible: { opacity: 1, scale: 1 },
   hidden: { opacity: 0, scale: 0 },
 };
 
+const imgsContainerVariants = {
+  hidden: { opacity: 0, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: 'tween',
+      stiffness: 300,
+      damping: 30,
+      staggerChildren: 0.3,
+    },
+  },
+};
+
 const AboutMeImage = ({ imageSrc, imageAlt }) => (
-  <div className="aboutme__image">
+  <motion.div className="aboutme__image" variants={imageVariants}>
     <motion.img
       src={imageSrc}
       alt={imageAlt}
@@ -22,7 +36,7 @@ const AboutMeImage = ({ imageSrc, imageAlt }) => (
         damping: 30,
       }}
     />
-  </div>
+  </motion.div>
 );
 
 const AboutMe = () => (
@@ -42,21 +56,20 @@ const AboutMe = () => (
             to take on new challenges in the world of web development.
           </p>
         </div>
-        <motion.div
-          className="aboutme__extra"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          transition={{ type: 'tween', duration: 0.7 }}
-          variants={boxVariants}
-        >
+        <div className="aboutme__extra">
           <div className="aboutme__extra-description">
             <p>
               In addition to web development, I have a strong creative side that
               I express through playing the guitar and drawing.
             </p>
           </div>
-          <div className="aboutme__images">
+          <motion.div
+            className="aboutme__images"
+            initial="hidden"
+            whileInView="visible"
+            variants={imgsContainerVariants}
+            viewport={{ once: true }}
+          >
             <AboutMeImage
               imageSrc={Deer}
               imageAlt="Deer - Wolfushima Original Artwork"
@@ -73,8 +86,8 @@ const AboutMe = () => (
               imageSrc={Dolphin}
               imageAlt="Dolphin - Wolfushima Original Artwork"
             />
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </div>
   </section>
