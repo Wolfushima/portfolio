@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import scrollToId from '../utils/scrollToId';
 
 const Header = () => {
@@ -14,6 +14,17 @@ const Header = () => {
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
+
+  useEffect(() => {
+    if (isNavOpen) {
+      document.querySelector('main').addEventListener('click', toggleNav);
+      document.querySelector('footer').addEventListener('click', toggleNav);
+    }
+    return () => {
+      document.querySelector('main').removeEventListener('click', toggleNav);
+      document.querySelector('footer').removeEventListener('click', toggleNav);
+    };
+  }, [isNavOpen]);
 
   return (
     <header id="header" className="header">
