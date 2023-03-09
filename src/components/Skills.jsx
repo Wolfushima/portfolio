@@ -11,9 +11,23 @@ import GitHubLogo from '../assets/skills/github-logo.svg';
 import WebpackLogo from '../assets/skills/webpack-logo.svg';
 import FigmaLogo from '../assets/skills/figma-logo.svg';
 
-const boxVariants = {
+const skillBoxVariants = {
   visible: { opacity: 1, scale: 1 },
   hidden: { opacity: 0, scale: 0 },
+};
+
+const skillBoxsContainerVariants = {
+  hidden: { opacity: 0, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      type: 'tween',
+      stiffness: 300,
+      damping: 30,
+      staggerChildren: 0.3,
+    },
+  },
 };
 
 const Skill = ({ logo, skillName }) => (
@@ -33,14 +47,7 @@ const Skill = ({ logo, skillName }) => (
 );
 
 const SkillBox = ({ skillBoxTitle, children }) => (
-  <motion.div
-    className="skills__box"
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true }}
-    transition={{ type: 'tween', duration: 0.7 }}
-    variants={boxVariants}
-  >
+  <motion.div className="skills__box" variants={skillBoxVariants}>
     <h5>{skillBoxTitle}</h5>
     <div className="skills__box-items">{children}</div>
   </motion.div>
@@ -53,7 +60,13 @@ const Skills = () => (
         <div className="skills__header">
           <h3>SKILLS</h3>
         </div>
-        <div className="skills__skills">
+        <motion.div
+          className="skills__skills"
+          initial="hidden"
+          whileInView="visible"
+          variants={skillBoxsContainerVariants}
+          viewport={{ once: true }}
+        >
           <SkillBox skillBoxTitle="Languages">
             <Skill skillName="JavaScript" logo={JavaScriptLogo} />
             <Skill skillName="HTML" logo={HTMLLogo} />
@@ -72,7 +85,7 @@ const Skills = () => (
             <Skill skillName="Webpack" logo={WebpackLogo} />
             <Skill skillName="Figma" logo={FigmaLogo} />
           </SkillBox>
-        </div>
+        </motion.div>
       </div>
     </div>
   </section>
