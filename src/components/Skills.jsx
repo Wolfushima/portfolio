@@ -48,7 +48,7 @@ const Skill = ({ logo, skillName }) => (
 
 const SkillBox = ({ skillBoxTitle, children }) => (
   <motion.div className="skills__box" variants={skillBoxVariants}>
-    <h5>{skillBoxTitle}</h5>
+    <p className="skills__box-title">{skillBoxTitle}</p>
     <div className="skills__box-items">{children}</div>
   </motion.div>
 );
