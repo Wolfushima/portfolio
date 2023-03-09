@@ -59,6 +59,7 @@ const ProjectSlider = ({ images, imagePlaceholder, projectTitle }) => {
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
           className="projects__slider-image"
+          alt={projectTitle}
           key={page}
           src={images[imageIndex]}
           custom={direction}
