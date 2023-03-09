@@ -64,12 +64,9 @@
         border: none;
         cursor: pointer;
         font-family: 'Montserrat', sans-serif;
-        transition: all 0.3s ease;
+        transition: color 0.3s ease;
         &:hover {
           color: darken($light-text, 5%);
-        }
-        &:hover {
-          border-bottom: 1px solid white;
         }
       }
     }
