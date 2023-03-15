@@ -3,6 +3,7 @@ import scrollToId from '../utils/scrollToId';
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isBgTransparent, setIsBgTransparent] = useState(true);
 
   const handleLiClick = (id) => {
     scrollToId(id);
@@ -14,6 +15,19 @@ const Header = () => {
   const toggleNav = () => {
     setIsNavOpen(!isNavOpen);
   };
+
+  const listenScrollEvent = () => {
+    if (window.scrollY === 0) {
+      return setIsBgTransparent(true);
+    }
+    return setIsBgTransparent(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', listenScrollEvent);
+
+    return () => window.removeEventListener('scroll', listenScrollEvent);
+  }, []);
 
   useEffect(() => {
     if (isNavOpen) {
@@ -27,7 +41,10 @@ const Header = () => {
   }, [isNavOpen]);
 
   return (
-    <header id="header" className="header">
+    <header
+      id="header"
+      className={isBgTransparent ? 'header bgTransparent' : 'header'}
+    >
       <div className="header__wrapper">
         <div className="header__container">
           <button
