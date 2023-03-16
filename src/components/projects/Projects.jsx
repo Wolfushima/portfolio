@@ -40,21 +40,9 @@ const ProjectSlider = ({ images, imagePlaceholder, projectTitle }) => {
   return (
     <motion.div
       className="projects__slider"
-      initial={{ opacity: 0, scale: 0.5 }}
-      whileInView={{ opacity: 1, scale: 1 }}
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
       viewport={{ once: true }}
-      transition={{
-        default: {
-          duration: 0.3,
-          ease: [0, 0.71, 0.2, 1.01],
-        },
-        scale: {
-          type: 'tween',
-          damping: 5,
-          stiffness: 100,
-          restDelta: 0.001,
-        },
-      }}
     >
       <AnimatePresence initial={false} custom={direction}>
         <motion.img

@@ -6,22 +6,8 @@ import Bird from '../assets/aboutme/bird.jpg';
 import Dolphin from '../assets/aboutme/dolphin.jpg';
 
 const imageVariants = {
-  visible: { opacity: 1, scale: 1 },
-  hidden: { opacity: 0, scale: 0 },
-};
-
-const imgsContainerVariants = {
-  hidden: { opacity: 0, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      type: 'tween',
-      stiffness: 300,
-      damping: 30,
-      staggerChildren: 0.3,
-    },
-  },
+  hidden: { opacity: 0, y: 10 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
 const AboutMeImage = ({ imageSrc, imageAlt }) => (
@@ -67,7 +53,7 @@ const AboutMe = () => (
             className="aboutme__images"
             initial="hidden"
             whileInView="visible"
-            variants={imgsContainerVariants}
+            variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
             viewport={{ once: true }}
           >
             <AboutMeImage

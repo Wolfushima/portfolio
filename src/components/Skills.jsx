@@ -12,35 +12,14 @@ import WebpackLogo from '../assets/skills/webpack-logo.svg';
 import FigmaLogo from '../assets/skills/figma-logo.svg';
 
 const skillBoxVariants = {
-  visible: { opacity: 1, scale: 1 },
-  hidden: { opacity: 0, scale: 0 },
-};
-
-const skillBoxsContainerVariants = {
-  hidden: { opacity: 0, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      type: 'tween',
-      stiffness: 300,
-      damping: 30,
-      staggerChildren: 0.3,
-    },
-  },
+  hidden: { opacity: 0, y: 10 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
 const Skill = ({ logo, skillName }) => (
   <div className="skills__skill">
     <div className="skills__logo">
-      <motion.img
-        src={logo}
-        alt={skillName}
-        whileHover={{
-          scale: 1.1,
-          transition: { duration: 0.3 },
-        }}
-      />
+      <img src={logo} alt={skillName} />
     </div>
     <p>{skillName}</p>
   </div>
@@ -64,7 +43,7 @@ const Skills = () => (
           className="skills__skills"
           initial="hidden"
           whileInView="visible"
-          variants={skillBoxsContainerVariants}
+          variants={{ visible: { transition: { staggerChildren: 0.5 } } }}
           viewport={{ once: true }}
         >
           <SkillBox skillBoxTitle="Languages">
