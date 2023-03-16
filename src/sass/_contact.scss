@@ -1,5 +1,11 @@
 .contact {
   background: $bg-grey-dark;
+  background-image:
+  linear-gradient(180deg, rgba(32, 32, 32, 0.763), rgba(32, 32, 32, 0.763)),
+  url('../assets/home/stars-background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   &__wrapper{
     max-width: 1440px;
     padding: 5rem;

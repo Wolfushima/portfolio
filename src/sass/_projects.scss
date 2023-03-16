@@ -1,5 +1,13 @@
 .projects {
   background: $bg-grey-dark;
+  background-image:
+  linear-gradient(180deg, rgba(32, 32, 32, 0.763), rgba(32, 32, 32, 0.763)),
+  url('../assets/projects/stars-background-vertical.jpg');
+  background-size: contain;
+  @media screen and (min-width:1900px) {
+    background-repeat: repeat-y;
+    background-size:cover;
+  }
   &__wrapper{
     max-width: 1440px;
     padding: 5rem;
@@ -96,10 +104,8 @@
     width: 60%;
     overflow: hidden;
   }
-  .greybg {
-    background: $bg-grey-darkest;
-    border-bottom: 1px solid $bg-grey-dark;
-    border-top: 1px solid $bg-grey-dark;
+  .horizontal {
+    background: transparent;
   }
   &__showmore {
     a{
@@ -117,13 +123,17 @@
     }
   }
   &__wrapper.showmore {
-    padding-top: 1rem;
+    padding-top: 0rem;
+
+    div.projects__container {
+      padding-top: 1rem;
+      border-top: 1px solid #292929;
+    }
   }
   &__slider {
     width: 100%;
     position: relative;
 
-  
     .next,
     .prev {
       position: absolute;

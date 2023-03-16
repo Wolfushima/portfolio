@@ -111,7 +111,7 @@ const Project = ({
     return (
       <div
         className={
-          isFeatured ? 'projects__wrapper' : 'projects__wrapper greybg'
+          isFeatured ? 'projects__wrapper' : 'projects__wrapper horizontal'
         }
       >
         <div className="projects__container">
@@ -136,7 +136,7 @@ const Project = ({
       </div>
     );
   return (
-    <div className="projects__wrapper greybg">
+    <div className="projects__wrapper horizontal">
       <div className="projects__container">
         <div className="projects__project">
           <div className="projects__left">
