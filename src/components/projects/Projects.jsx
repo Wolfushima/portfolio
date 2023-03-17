@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Project from './Project';
 import projectsImages from './projectsImages';
+import projectsSkills from './projectsSkills';
 
 const Projects = () => {
   const [matches, setMatches] = useState(
@@ -25,6 +26,7 @@ const Projects = () => {
         imagePlaceholder={projectsImages.studioGhibliShoppingCart[0]}
         liveLink="https://wolfushima.github.io/react-shopping-cart/"
         codeLink="https://github.com/Wolfushima/react-shopping-cart/"
+        projectSkills={projectsSkills.studioGhibliShoppingCart}
       />
       <Project
         isRow={!!matches}
@@ -34,6 +36,7 @@ const Projects = () => {
         imagePlaceholder={projectsImages.rickAndMortyMemoryCard[0]}
         liveLink="https://wolfushima.github.io/react-memory-card/"
         codeLink="https://github.com/Wolfushima/react-memory-card/"
+        projectSkills={projectsSkills.rickAndMortyMemoryCard}
       />
       <Project
         isRow={!!matches}
@@ -43,6 +46,7 @@ const Projects = () => {
         imagePlaceholder={projectsImages.weatherApp[0]}
         liveLink="https://wolfushima.github.io/weather-app/"
         codeLink="https://github.com/Wolfushima/weather-app/"
+        projectSkills={projectsSkills.weatherApp}
       />
       <Project
         isRow={!!matches}
@@ -52,6 +56,7 @@ const Projects = () => {
         imagePlaceholder={projectsImages.battleship[0]}
         liveLink="https://wolfushima.github.io/battleship/"
         codeLink="https://github.com/Wolfushima/battleship/"
+        projectSkills={projectsSkills.battleship}
       />
       <div className="projects__wrapper showmore">
         <div className="projects__container">
