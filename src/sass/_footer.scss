@@ -24,6 +24,8 @@
     }
     @media screen and (max-width:440px) {
       flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
       gap: 4rem;
     }
   }
@@ -44,10 +46,11 @@
   &__contact {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 100%;
     gap: 2rem;
   }
   &__icon {
-    min-width: max-content;
     width: 1.5rem;
     max-width: 1.5rem;
     height: 1.5rem;
