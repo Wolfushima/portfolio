@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.31689c3c.css",
+    "main.css": "/portfolio/static/css/main.e0fc96cb.css",
     "main.js": "/portfolio/static/js/main.2a9eb6f5.js",
     "static/media/polar.jpg": "/portfolio/static/media/polar.ec1d478c5eac07fbde7b.jpg",
     "static/media/dolphin.jpg": "/portfolio/static/media/dolphin.b02c8eb828b7e0e6b572.jpg",
@@ -48,7 +48,7 @@
     "static/media/email-icon.svg": "/portfolio/static/media/email-icon.c3d637566a42b8bdd10b09cf38477fc2.svg"
   },
   "entrypoints": [
-    "static/css/main.31689c3c.css",
+    "static/css/main.e0fc96cb.css",
     "static/js/main.2a9eb6f5.js"
   ]
 }
