@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.3f2361f0.css",
-    "main.js": "/portfolio/static/js/main.15859e8e.js",
+    "main.js": "/portfolio/static/js/main.74da786b.js",
     "static/media/polar.jpg": "/portfolio/static/media/polar.ec1d478c5eac07fbde7b.jpg",
     "static/media/dolphin.jpg": "/portfolio/static/media/dolphin.b02c8eb828b7e0e6b572.jpg",
     "static/media/bird.jpg": "/portfolio/static/media/bird.881257833ae27c8cc353.jpg",
@@ -49,6 +49,6 @@
   },
   "entrypoints": [
     "static/css/main.3f2361f0.css",
-    "static/js/main.15859e8e.js"
+    "static/js/main.74da786b.js"
   ]
 }
