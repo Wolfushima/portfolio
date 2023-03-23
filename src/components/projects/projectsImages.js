@@ -10,6 +10,10 @@ import StudioGhibliImg9 from '../../assets/projects/studioghibli-shopping-cart/s
 import StudioGhibliImg10 from '../../assets/projects/studioghibli-shopping-cart/studioghibli-shopping-cart10.jpg';
 import StudioGhibliImg11 from '../../assets/projects/studioghibli-shopping-cart/studioghibli-shopping-cart11.jpg';
 
+import PortfolioImg1 from '../../assets/projects/portfolio/portfolio1.jpg';
+import PortfolioImg2 from '../../assets/projects/portfolio/portfolio2.jpg';
+import PortfolioImg3 from '../../assets/projects/portfolio/portfolio3.jpg';
+
 import RickAndMortyImg1 from '../../assets/projects/rickandmorty-memory-card/rickandmorty-memory-card1.jpg';
 import RickAndMortyImg2 from '../../assets/projects/rickandmorty-memory-card/rickandmorty-memory-card2.jpg';
 import RickAndMortyImg3 from '../../assets/projects/rickandmorty-memory-card/rickandmorty-memory-card3.jpg';
@@ -38,6 +42,7 @@ const projectsImages = {
     StudioGhibliImg10,
     StudioGhibliImg11,
   ],
+  portfolio: [PortfolioImg1, PortfolioImg2, PortfolioImg3],
   rickAndMortyMemoryCard: [
     RickAndMortyImg1,
     RickAndMortyImg2,

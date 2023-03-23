@@ -30,6 +30,16 @@ const Projects = () => {
       />
       <Project
         isRow={!!matches}
+        projectTitle="Portfolio"
+        projectDescription="Used React and Framer Motion to create a smooth and visually engaging portfolio with reusable components and animations."
+        projectImages={projectsImages.portfolio}
+        imagePlaceholder={projectsImages.portfolio[0]}
+        liveLink="https://wolfushima.github.io/portfolio/"
+        codeLink="https://github.com/Wolfushima/portfolio/"
+        projectSkills={projectsSkills.portfolio}
+      />
+      <Project
+        isRow={!!matches}
         projectTitle="Rick and Morty Memory Card"
         projectDescription="A react-based game built with functional components, where players must click through every character once to win. With each click, the state updates and the cards are shuffled accordingly."
         projectImages={projectsImages.rickAndMortyMemoryCard}

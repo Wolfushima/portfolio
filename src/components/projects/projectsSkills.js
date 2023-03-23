@@ -6,6 +6,7 @@ import ReactLogo from '../../assets/skills/react-logo.svg';
 import WebpackLogo from '../../assets/skills/webpack-logo.svg';
 import ReactRouterLogo from '../../assets/skills/react-router-logo.svg';
 import JestLogo from '../../assets/skills/jest-logo.svg';
+import FramerMotionLogo from '../../assets/skills/framer-motion-logo.svg';
 
 const projectsSkills = {
   studioGhibliShoppingCart: [
@@ -16,6 +17,14 @@ const projectsSkills = {
     { src: CSSLogo, alt: 'CSS' },
     { src: SassLogo, alt: 'Sass' },
     { src: JestLogo, alt: 'Jest' },
+  ],
+  portfolio: [
+    { src: ReactLogo, alt: 'React' },
+    { src: JavaScriptLogo, alt: 'JavaScript' },
+    { src: HTMLLogo, alt: 'HTML' },
+    { src: CSSLogo, alt: 'CSS' },
+    { src: SassLogo, alt: 'Sass' },
+    { src: FramerMotionLogo, alt: 'Framer Motion' },
   ],
   rickAndMortyMemoryCard: [
     { src: ReactLogo, alt: 'React' },
