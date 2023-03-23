@@ -51,28 +51,45 @@ const Header = () => {
             type="button"
             className="header__logo"
             onClick={() => scrollToId('home')}
+            aria-label="Adolfo Herrera"
           >
             Adolfo Herrera
           </button>
           <nav>
             <ul className={isNavOpen ? 'expanded' : null}>
               <li>
-                <button type="button" onClick={() => handleLiClick('aboutme')}>
+                <button
+                  type="button"
+                  onClick={() => handleLiClick('aboutme')}
+                  aria-label="About Me"
+                >
                   About Me
                 </button>
               </li>
               <li>
-                <button type="button" onClick={() => handleLiClick('projects')}>
+                <button
+                  type="button"
+                  onClick={() => handleLiClick('projects')}
+                  aria-label="Projects"
+                >
                   Projects
                 </button>
               </li>
               <li>
-                <button type="button" onClick={() => handleLiClick('skills')}>
+                <button
+                  type="button"
+                  onClick={() => handleLiClick('skills')}
+                  aria-label="Skills"
+                >
                   Skills
                 </button>
               </li>
               <li>
-                <button type="button" onClick={() => handleLiClick('contact')}>
+                <button
+                  type="button"
+                  onClick={() => handleLiClick('contact')}
+                  aria-label="Contact"
+                >
                   Contact
                 </button>
               </li>
@@ -84,6 +101,7 @@ const Header = () => {
               isNavOpen ? 'header__hamburger open' : 'header__hamburger button'
             }
             onClick={toggleNav}
+            aria-label="Hamburger Menu"
           >
             <span />
             <span />
