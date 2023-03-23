@@ -10,6 +10,7 @@ import GitLogo from '../assets/skills/git-logo.svg';
 import GitHubLogo from '../assets/skills/github-logo.svg';
 import WebpackLogo from '../assets/skills/webpack-logo.svg';
 import FigmaLogo from '../assets/skills/figma-logo.svg';
+import FramerMotionLogo from '../assets/skills/framer-motion-logo.svg';
 
 const skillBoxVariants = {
   hidden: { opacity: 0, y: 10 },
@@ -60,9 +61,10 @@ const Skills = () => (
             <Skill skillName="Git" logo={GitLogo} />
             <Skill skillName="GitHub" logo={GitHubLogo} />
           </SkillBox>
-          <SkillBox skillBoxTitle="Tools">
+          <SkillBox skillBoxTitle="Tools/Libraries">
             <Skill skillName="Webpack" logo={WebpackLogo} />
             <Skill skillName="Figma" logo={FigmaLogo} />
+            <Skill skillName="Framer Motion" logo={FramerMotionLogo} />
           </SkillBox>
         </motion.div>
       </div>
