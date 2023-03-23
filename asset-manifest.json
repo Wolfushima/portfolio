@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.6c1b4a29.css",
-    "main.js": "/portfolio/static/js/main.2a9eb6f5.js",
+    "main.js": "/portfolio/static/js/main.15859e8e.js",
     "static/media/polar.jpg": "/portfolio/static/media/polar.ec1d478c5eac07fbde7b.jpg",
     "static/media/dolphin.jpg": "/portfolio/static/media/dolphin.b02c8eb828b7e0e6b572.jpg",
     "static/media/bird.jpg": "/portfolio/static/media/bird.881257833ae27c8cc353.jpg",
@@ -33,11 +33,11 @@
     "static/media/jest-logo.svg": "/portfolio/static/media/jest-logo.28460723e4e43a04e7469d21fda4744b.svg",
     "static/media/react-logo.svg": "/portfolio/static/media/react-logo.7456ada774deac56feb515fe5d700b4b.svg",
     "static/media/sass-logo.svg": "/portfolio/static/media/sass-logo.be65d660261dc608a9ed37e9cbe3f41a.svg",
-    "static/media/git-logo.svg": "/portfolio/static/media/git-logo.285c10e8079bd10d712bab6b302018c2.svg",
     "static/media/react-router-logo.svg": "/portfolio/static/media/react-router-logo.31051feb486843c4ac241f4acf2c5cf1.svg",
     "static/media/bootstrap-logo.svg": "/portfolio/static/media/bootstrap-logo.7c7b63246d6530dfdb4a42fe346d1683.svg",
     "static/media/instagram-logo.svg": "/portfolio/static/media/instagram-logo.7a7ffc8d637f90fb032b8707a29aa5ad.svg",
     "static/media/github-logo.svg": "/portfolio/static/media/github-logo.05dead8764fa42d3513063958a4ae3f7.svg",
+    "static/media/git-logo.svg": "/portfolio/static/media/git-logo.4c9774d77bd486b956fdb14c92018d4c.svg",
     "index.html": "/portfolio/index.html",
     "static/media/figma-logo.svg": "/portfolio/static/media/figma-logo.b3de95804e4b5db63147dd8364961b13.svg",
     "static/media/javascript-logo.svg": "/portfolio/static/media/javascript-logo.04db69b645b0e7c337bd0bd181fc8fdd.svg",
@@ -49,6 +49,6 @@
   },
   "entrypoints": [
     "static/css/main.6c1b4a29.css",
-    "static/js/main.2a9eb6f5.js"
+    "static/js/main.15859e8e.js"
   ]
 }
