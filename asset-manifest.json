@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.3f2361f0.css",
-    "main.js": "/portfolio/static/js/main.74da786b.js",
+    "main.css": "/portfolio/static/css/main.f41f504f.css",
+    "main.js": "/portfolio/static/js/main.b1f57c07.js",
     "static/media/polar.jpg": "/portfolio/static/media/polar.ec1d478c5eac07fbde7b.jpg",
     "static/media/dolphin.jpg": "/portfolio/static/media/dolphin.b02c8eb828b7e0e6b572.jpg",
     "static/media/bird.jpg": "/portfolio/static/media/bird.881257833ae27c8cc353.jpg",
@@ -15,6 +15,7 @@
     "static/media/studioghibli-shopping-cart11.jpg": "/portfolio/static/media/studioghibli-shopping-cart11.fae0f0a308f76f3da905.jpg",
     "static/media/stars-background-vertical.jpg": "/portfolio/static/media/stars-background-vertical.faed533b631ffa578c9c.jpg",
     "static/media/studioghibli-shopping-cart6.jpg": "/portfolio/static/media/studioghibli-shopping-cart6.5e97290e07876307e364.jpg",
+    "static/media/portfolio2.jpg": "/portfolio/static/media/portfolio2.7201fe30a1dfc9ef7f73.jpg",
     "static/media/rickandmorty-memory-card4.jpg": "/portfolio/static/media/rickandmorty-memory-card4.0ee4d8adcc9a8b46e8f1.jpg",
     "static/media/studioghibli-shopping-cart8.jpg": "/portfolio/static/media/studioghibli-shopping-cart8.728b602b0c2a834cc2af.jpg",
     "static/media/studioghibli-shopping-cart7.jpg": "/portfolio/static/media/studioghibli-shopping-cart7.39ebc5bed0eace3560fb.jpg",
@@ -27,8 +28,10 @@
     "static/media/rickandmorty-memory-card3.jpg": "/portfolio/static/media/rickandmorty-memory-card3.ea79ecf8c3289e8d482a.jpg",
     "static/media/battleship3.jpg": "/portfolio/static/media/battleship3.fad1bcbfe3c096364334.jpg",
     "static/media/studioghibli-shopping-cart9.jpg": "/portfolio/static/media/studioghibli-shopping-cart9.7f867a6c46386a927b24.jpg",
+    "static/media/portfolio1.jpg": "/portfolio/static/media/portfolio1.db422a93c3356ed26b3f.jpg",
     "static/media/rickandmorty-memory-card2.jpg": "/portfolio/static/media/rickandmorty-memory-card2.3bbded2b4e32efc38ba3.jpg",
     "static/media/rickandmorty-memory-card1.jpg": "/portfolio/static/media/rickandmorty-memory-card1.6da74605481a16e35083.jpg",
+    "static/media/portfolio3.jpg": "/portfolio/static/media/portfolio3.609413f94bccc0956264.jpg",
     "static/media/rickandmorty-memory-card5.jpg": "/portfolio/static/media/rickandmorty-memory-card5.cbca03eaf18e1a870d24.jpg",
     "static/media/jest-logo.svg": "/portfolio/static/media/jest-logo.28460723e4e43a04e7469d21fda4744b.svg",
     "static/media/react-logo.svg": "/portfolio/static/media/react-logo.7456ada774deac56feb515fe5d700b4b.svg",
@@ -45,10 +48,11 @@
     "static/media/webpack-logo.svg": "/portfolio/static/media/webpack-logo.0d16a21d05cadc6e9e5b42bd4ead46d9.svg",
     "static/media/css-logo.svg": "/portfolio/static/media/css-logo.340d32293c255de5a18eb9055ff5993c.svg",
     "static/media/html-logo.svg": "/portfolio/static/media/html-logo.f8fbb93d1422fa3a317ea13613e97cd7.svg",
+    "static/media/framer-motion-logo.svg": "/portfolio/static/media/framer-motion-logo.cd0e8acf350dd639e9e8c999f8539a5e.svg",
     "static/media/email-icon.svg": "/portfolio/static/media/email-icon.c3d637566a42b8bdd10b09cf38477fc2.svg"
   },
   "entrypoints": [
-    "static/css/main.3f2361f0.css",
-    "static/js/main.74da786b.js"
+    "static/css/main.f41f504f.css",
+    "static/js/main.b1f57c07.js"
   ]
 }
