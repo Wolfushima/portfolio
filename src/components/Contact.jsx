@@ -13,14 +13,13 @@ const Contact = () => {
             <p>I&apos;m currently available for work</p>
           </div>
           <form
-            name="contact"
+            className="contact__form"
+            name="Contact"
             method="POST"
             netlify
-            className="contact__form"
-            netlify-honeypot="bot-field"
-            hidden
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
           >
-            <input type="hidden" name="bot-field" value="contact" />
             <div>
               <label htmlFor="name">
                 Your Name: <input type="text" name="name" />
