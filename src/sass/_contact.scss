@@ -49,4 +49,50 @@
       }
     }
   }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    min-width: 220px;
+    gap: 1rem;
+    div,
+    input,
+    textarea {
+      width: 100%;
+    }
+    label {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 0.5rem;
+      font-size: $font-xsm;
+      font-family: 'Open Sans', sans-serif;
+      color: $light-text;
+      font-weight: 900;
+    }
+    input,
+    textarea {
+      background: $bg-light;
+      border-radius: none;
+      border: 1px solid $grey-text;
+      padding: 0.5rem;
+      font-size: $font-sm;
+      font-family: 'Open Sans', sans-serif;
+      color: $dark-grey-text;
+    }
+    input:focus,
+    textarea:focus {
+      outline: 1px solid $grey-text;
+      box-shadow: 0 0 1px $grey-text;
+    }
+    input {
+      height: auto;
+    }
+    textarea {
+      height: 160px;
+    }
+  }
 }
