@@ -34,7 +34,7 @@ const Projects = () => {
         projectDescription="Used React and Framer Motion to create a smooth and visually engaging portfolio with reusable components and animations."
         projectImages={projectsImages.portfolio}
         imagePlaceholder={projectsImages.portfolio[0]}
-        liveLink="https://wolfushima.github.io/portfolio/"
+        liveLink="https://adolfoherrera.netlify.app/"
         codeLink="https://github.com/Wolfushima/portfolio/"
         projectSkills={projectsSkills.portfolio}
       />
