@@ -22,17 +22,17 @@ const Contact = () => {
             <input type="hidden" name="form-name" value="Contact" />
             <div>
               <label htmlFor="name">
-                Your Name: <input type="text" name="name" />
+                Your Name: <input type="text" name="name" id="name" />
               </label>
             </div>
             <div>
               <label htmlFor="email">
-                Your Email: <input type="email" name="email" />
+                Your Email: <input type="email" name="email" id="email" />
               </label>
             </div>
             <div>
               <label htmlFor="message">
-                Message: <textarea name="message" />
+                Message: <textarea name="message" id="message" />
               </label>
             </div>
             <div className="contact__button">
