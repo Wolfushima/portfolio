@@ -14,11 +14,11 @@ import PortfolioImg1 from '../../assets/projects/portfolio/portfolio1.jpg';
 import PortfolioImg2 from '../../assets/projects/portfolio/portfolio2.jpg';
 import PortfolioImg3 from '../../assets/projects/portfolio/portfolio3.jpg';
 
-import RickAndMortyImg1 from '../../assets/projects/rickandmorty-memory-card/rickandmorty-memory-card1.jpg';
-import RickAndMortyImg2 from '../../assets/projects/rickandmorty-memory-card/rickandmorty-memory-card2.jpg';
-import RickAndMortyImg3 from '../../assets/projects/rickandmorty-memory-card/rickandmorty-memory-card3.jpg';
-import RickAndMortyImg4 from '../../assets/projects/rickandmorty-memory-card/rickandmorty-memory-card4.jpg';
-import RickAndMortyImg5 from '../../assets/projects/rickandmorty-memory-card/rickandmorty-memory-card5.jpg';
+import WhereIsWaldoImg1 from '../../assets/projects/where-is-waldo/where-is-waldo-1.webp';
+import WhereIsWaldoImg2 from '../../assets/projects/where-is-waldo/where-is-waldo-2.webp';
+import WhereIsWaldoImg3 from '../../assets/projects/where-is-waldo/where-is-waldo-3.webp';
+import WhereIsWaldoImg4 from '../../assets/projects/where-is-waldo/where-is-waldo-4.webp';
+import WhereIsWaldoImg5 from '../../assets/projects/where-is-waldo/where-is-waldo-5.webp';
 
 import WeatherAppImg1 from '../../assets/projects/weather-app/weather-app1.jpg';
 import WeatherAppImg2 from '../../assets/projects/weather-app/weather-app2.jpg';
@@ -43,12 +43,12 @@ const projectsImages = {
     StudioGhibliImg11,
   ],
   portfolio: [PortfolioImg1, PortfolioImg2, PortfolioImg3],
-  rickAndMortyMemoryCard: [
-    RickAndMortyImg1,
-    RickAndMortyImg2,
-    RickAndMortyImg3,
-    RickAndMortyImg4,
-    RickAndMortyImg5,
+  whereIsWaldo: [
+    WhereIsWaldoImg1,
+    WhereIsWaldoImg2,
+    WhereIsWaldoImg3,
+    WhereIsWaldoImg4,
+    WhereIsWaldoImg5,
   ],
   weatherApp: [WeatherAppImg1, WeatherAppImg2, WeatherAppImg3],
   battleship: [BattleshipImg1, BattleshipImg2, BattleshipImg3],

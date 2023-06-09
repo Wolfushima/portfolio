@@ -7,6 +7,8 @@ import WebpackLogo from '../../assets/skills/webpack-logo.svg';
 import ReactRouterLogo from '../../assets/skills/react-router-logo.svg';
 import JestLogo from '../../assets/skills/jest-logo.svg';
 import FramerMotionLogo from '../../assets/skills/framer-motion-logo.svg';
+import FirebaseLogo from '../../assets/skills/firebase-logo.svg';
+import ReduxLogo from '../../assets/skills/redux-logo.svg';
 
 const projectsSkills = {
   studioGhibliShoppingCart: [
@@ -26,8 +28,11 @@ const projectsSkills = {
     { src: SassLogo, alt: 'Sass' },
     { src: FramerMotionLogo, alt: 'Framer Motion' },
   ],
-  rickAndMortyMemoryCard: [
+  whereIsWaldo: [
     { src: ReactLogo, alt: 'React' },
+    { src: ReactRouterLogo, alt: 'React Router' },
+    { src: ReduxLogo, alt: 'Redux' },
+    { src: FirebaseLogo, alt: 'Firebase' },
     { src: JavaScriptLogo, alt: 'JavaScript' },
     { src: HTMLLogo, alt: 'HTML' },
     { src: CSSLogo, alt: 'CSS' },

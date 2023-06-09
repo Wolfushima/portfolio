@@ -30,6 +30,16 @@ const Projects = () => {
       />
       <Project
         isRow={!!matches}
+        projectTitle="Where is Waldo?"
+        projectDescription="Photo-tagging application that incorporates a backend using Firebase. The objective of the project is to find Waldo and other hidden characters within six different levels."
+        projectImages={projectsImages.whereIsWaldo}
+        imagePlaceholder={projectsImages.whereIsWaldo[0]}
+        liveLink="https://wolfushima.github.io/where-is-waldo/"
+        codeLink="https://github.com/Wolfushima/where-is-waldo"
+        projectSkills={projectsSkills.whereIsWaldo}
+      />
+      <Project
+        isRow={!!matches}
         projectTitle="Portfolio"
         projectDescription="Used React and Framer Motion to create a smooth and visually engaging portfolio with reusable components and animations."
         projectImages={projectsImages.portfolio}
@@ -37,16 +47,6 @@ const Projects = () => {
         liveLink="https://adolfoherrera.netlify.app/"
         codeLink="https://github.com/Wolfushima/portfolio/"
         projectSkills={projectsSkills.portfolio}
-      />
-      <Project
-        isRow={!!matches}
-        projectTitle="Rick and Morty Memory Card"
-        projectDescription="A react-based game built with functional components, where players must click through every character once to win. With each click, the state updates and the cards are shuffled accordingly."
-        projectImages={projectsImages.rickAndMortyMemoryCard}
-        imagePlaceholder={projectsImages.rickAndMortyMemoryCard[0]}
-        liveLink="https://wolfushima.github.io/react-memory-card/"
-        codeLink="https://github.com/Wolfushima/react-memory-card/"
-        projectSkills={projectsSkills.rickAndMortyMemoryCard}
       />
       <Project
         isRow={!!matches}
