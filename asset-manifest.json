@@ -1,14 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.5094e969.css",
-    "main.js": "/static/js/main.fc2d7a77.js",
+    "main.css": "/static/css/main.76097213.css",
+    "main.js": "/static/js/main.6c49d06e.js",
     "static/media/polar.jpg": "/static/media/polar.ec1d478c5eac07fbde7b.jpg",
+    "static/media/where-is-waldo-3.webp": "/static/media/where-is-waldo-3.5766abbb107d1d220ed5.webp",
+    "static/media/where-is-waldo-2.webp": "/static/media/where-is-waldo-2.be13885da1bbdce010e6.webp",
     "static/media/dolphin.jpg": "/static/media/dolphin.b02c8eb828b7e0e6b572.jpg",
+    "static/media/where-is-waldo-4.webp": "/static/media/where-is-waldo-4.a1b9d5c8544707c4bb54.webp",
     "static/media/bird.jpg": "/static/media/bird.881257833ae27c8cc353.jpg",
     "static/media/deer.jpg": "/static/media/deer.760aff380d0cc4ee6750.jpg",
     "static/media/studioghibli-shopping-cart1.jpg": "/static/media/studioghibli-shopping-cart1.e2c2a6194b68ce999894.jpg",
     "static/media/studioghibli-shopping-cart2.jpg": "/static/media/studioghibli-shopping-cart2.1f4eb7a0de8a2eed60e6.jpg",
     "static/media/studioghibli-shopping-cart3.jpg": "/static/media/studioghibli-shopping-cart3.fe10e17d6c8434b1a350.jpg",
+    "static/media/where-is-waldo-1.webp": "/static/media/where-is-waldo-1.37d4860c453903af2cfb.webp",
     "static/media/stars-background.jpg": "/static/media/stars-background.d50412bfbae9bb4e1945.jpg",
     "static/media/studioghibli-shopping-cart4.jpg": "/static/media/studioghibli-shopping-cart4.5dc0f6783a59272ac3b9.jpg",
     "static/media/studioghibli-shopping-cart5.jpg": "/static/media/studioghibli-shopping-cart5.cdffa6d9ae5390faafc1.jpg",
@@ -16,7 +20,6 @@
     "static/media/stars-background-vertical.jpg": "/static/media/stars-background-vertical.faed533b631ffa578c9c.jpg",
     "static/media/studioghibli-shopping-cart6.jpg": "/static/media/studioghibli-shopping-cart6.5e97290e07876307e364.jpg",
     "static/media/portfolio2.jpg": "/static/media/portfolio2.7201fe30a1dfc9ef7f73.jpg",
-    "static/media/rickandmorty-memory-card4.jpg": "/static/media/rickandmorty-memory-card4.0ee4d8adcc9a8b46e8f1.jpg",
     "static/media/studioghibli-shopping-cart8.jpg": "/static/media/studioghibli-shopping-cart8.728b602b0c2a834cc2af.jpg",
     "static/media/studioghibli-shopping-cart7.jpg": "/static/media/studioghibli-shopping-cart7.39ebc5bed0eace3560fb.jpg",
     "static/media/weather-app3.jpg": "/static/media/weather-app3.a05743a7d20fb0c24abf.jpg",
@@ -25,17 +28,16 @@
     "static/media/weather-app1.jpg": "/static/media/weather-app1.826dd6d7cfcda6e07824.jpg",
     "static/media/weather-app2.jpg": "/static/media/weather-app2.4d6df65106538b51d9ee.jpg",
     "static/media/battleship2.jpg": "/static/media/battleship2.a959844ec2c19e72bbfe.jpg",
-    "static/media/rickandmorty-memory-card3.jpg": "/static/media/rickandmorty-memory-card3.ea79ecf8c3289e8d482a.jpg",
     "static/media/battleship3.jpg": "/static/media/battleship3.fad1bcbfe3c096364334.jpg",
     "static/media/studioghibli-shopping-cart9.jpg": "/static/media/studioghibli-shopping-cart9.7f867a6c46386a927b24.jpg",
+    "static/media/where-is-waldo-5.webp": "/static/media/where-is-waldo-5.95afb16e1c2b3db526c7.webp",
     "static/media/portfolio1.jpg": "/static/media/portfolio1.db422a93c3356ed26b3f.jpg",
-    "static/media/rickandmorty-memory-card2.jpg": "/static/media/rickandmorty-memory-card2.3bbded2b4e32efc38ba3.jpg",
-    "static/media/rickandmorty-memory-card1.jpg": "/static/media/rickandmorty-memory-card1.6da74605481a16e35083.jpg",
     "static/media/portfolio3.jpg": "/static/media/portfolio3.609413f94bccc0956264.jpg",
-    "static/media/rickandmorty-memory-card5.jpg": "/static/media/rickandmorty-memory-card5.cbca03eaf18e1a870d24.jpg",
     "static/media/jest-logo.svg": "/static/media/jest-logo.28460723e4e43a04e7469d21fda4744b.svg",
     "static/media/react-logo.svg": "/static/media/react-logo.7456ada774deac56feb515fe5d700b4b.svg",
     "static/media/sass-logo.svg": "/static/media/sass-logo.be65d660261dc608a9ed37e9cbe3f41a.svg",
+    "static/media/firebase-logo.svg": "/static/media/firebase-logo.8b3c7c37148d81488159ca16cafee38e.svg",
+    "static/media/redux-logo.svg": "/static/media/redux-logo.dfd05fe17b5d5295e8f73b71ea5d9149.svg",
     "static/media/react-router-logo.svg": "/static/media/react-router-logo.31051feb486843c4ac241f4acf2c5cf1.svg",
     "static/media/bootstrap-logo.svg": "/static/media/bootstrap-logo.7c7b63246d6530dfdb4a42fe346d1683.svg",
     "static/media/instagram-logo.svg": "/static/media/instagram-logo.7a7ffc8d637f90fb032b8707a29aa5ad.svg",
@@ -52,7 +54,7 @@
     "static/media/email-icon.svg": "/static/media/email-icon.c3d637566a42b8bdd10b09cf38477fc2.svg"
   },
   "entrypoints": [
-    "static/css/main.5094e969.css",
-    "static/js/main.fc2d7a77.js"
+    "static/css/main.76097213.css",
+    "static/js/main.6c49d06e.js"
   ]
 }
