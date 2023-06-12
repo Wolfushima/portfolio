@@ -11,6 +11,8 @@ import GitHubLogo from '../assets/skills/github-logo.svg';
 import WebpackLogo from '../assets/skills/webpack-logo.svg';
 import FigmaLogo from '../assets/skills/figma-logo.svg';
 import FramerMotionLogo from '../assets/skills/framer-motion-logo.svg';
+import ReduxLogo from '../assets/skills/redux-logo.svg';
+import FirebaseLogo from '../assets/skills/firebase-logo.svg';
 
 const skillBoxVariants = {
   hidden: { opacity: 0, y: 10 },
@@ -57,14 +59,22 @@ const Skills = () => (
             <Skill skillName="React" logo={ReactLogo} />
             <Skill skillName="Bootstrap" logo={BootstrapLogo} />
           </SkillBox>
+          <SkillBox skillBoxTitle="Libraries">
+            <Skill skillName="Redux" logo={ReduxLogo} />
+            <Skill skillName="Framer Motion" logo={FramerMotionLogo} />
+          </SkillBox>
+          <SkillBox skillBoxTitle="Backend/BaaS">
+            <Skill skillName="Firebase" logo={FirebaseLogo} />
+          </SkillBox>
+          <SkillBox skillBoxTitle="Tools">
+            <Skill skillName="Webpack" logo={WebpackLogo} />
+          </SkillBox>
           <SkillBox skillBoxTitle="Collaborative Work">
             <Skill skillName="Git" logo={GitLogo} />
             <Skill skillName="GitHub" logo={GitHubLogo} />
           </SkillBox>
-          <SkillBox skillBoxTitle="Tools/Libraries">
-            <Skill skillName="Webpack" logo={WebpackLogo} />
+          <SkillBox skillBoxTitle="Prototyping">
             <Skill skillName="Figma" logo={FigmaLogo} />
-            <Skill skillName="Framer Motion" logo={FramerMotionLogo} />
           </SkillBox>
         </motion.div>
       </div>
