@@ -30,7 +30,7 @@ const Projects = () => {
       />
       <Project
         isRow={!!matches}
-        projectTitle="Where is Waldo?"
+        projectTitle="Where's Waldo?"
         projectDescription="Photo-tagging application that incorporates a backend using Firebase. The objective of the project is to find Waldo and other hidden characters within six different levels."
         projectImages={projectsImages.whereIsWaldo}
         imagePlaceholder={projectsImages.whereIsWaldo[0]}
