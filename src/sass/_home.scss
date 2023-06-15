@@ -17,7 +17,7 @@
     align-items: center;
   }
   &__center {
-    position: relative;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,8 +27,9 @@
     linear-gradient(180deg, rgba(32, 32, 32, 0.763), rgba(32, 32, 32, 0.763)),
     url('../assets/projects/stars-background-vertical.jpg');
     background-size: contain;
-    height: 50%;
-    width: calc(50% - 2vw);
+    top: 0;
+    height: 85%;
+    width: calc(70.9% - 2vw);
     z-index: 5;
     overflow: hidden;
     padding: 2rem;
