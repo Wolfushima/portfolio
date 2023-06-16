@@ -22,10 +22,8 @@ const Home = () => (
           variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
         >
           <div className="home__headers">
-            <motion.p variants={homeVariants}>Hi,</motion.p>
-            <motion.h1 variants={homeVariants}>
-              I&apos;m Adolfo Herrera
-            </motion.h1>
+            <motion.p variants={homeVariants}>Hi, I&apos;m</motion.p>
+            <motion.h1 variants={homeVariants}>Adolfo Herrera</motion.h1>
             <motion.h2 variants={homeVariants}>Frontend Developer</motion.h2>
           </div>
           <div className="home__contact">
