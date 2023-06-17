@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.76097213.css",
-    "main.js": "/static/js/main.6c49d06e.js",
+    "main.css": "/static/css/main.abf803dc.css",
+    "main.js": "/static/js/main.70c08b3e.js",
     "static/media/polar.jpg": "/static/media/polar.ec1d478c5eac07fbde7b.jpg",
     "static/media/where-is-waldo-3.webp": "/static/media/where-is-waldo-3.5766abbb107d1d220ed5.webp",
     "static/media/where-is-waldo-2.webp": "/static/media/where-is-waldo-2.be13885da1bbdce010e6.webp",
@@ -17,7 +17,6 @@
     "static/media/studioghibli-shopping-cart4.jpg": "/static/media/studioghibli-shopping-cart4.5dc0f6783a59272ac3b9.jpg",
     "static/media/studioghibli-shopping-cart5.jpg": "/static/media/studioghibli-shopping-cart5.cdffa6d9ae5390faafc1.jpg",
     "static/media/studioghibli-shopping-cart11.jpg": "/static/media/studioghibli-shopping-cart11.fae0f0a308f76f3da905.jpg",
-    "static/media/stars-background-vertical.jpg": "/static/media/stars-background-vertical.faed533b631ffa578c9c.jpg",
     "static/media/studioghibli-shopping-cart6.jpg": "/static/media/studioghibli-shopping-cart6.5e97290e07876307e364.jpg",
     "static/media/portfolio2.jpg": "/static/media/portfolio2.7201fe30a1dfc9ef7f73.jpg",
     "static/media/studioghibli-shopping-cart8.jpg": "/static/media/studioghibli-shopping-cart8.728b602b0c2a834cc2af.jpg",
@@ -54,7 +53,7 @@
     "static/media/email-icon.svg": "/static/media/email-icon.c3d637566a42b8bdd10b09cf38477fc2.svg"
   },
   "entrypoints": [
-    "static/css/main.76097213.css",
-    "static/js/main.6c49d06e.js"
+    "static/css/main.abf803dc.css",
+    "static/js/main.70c08b3e.js"
   ]
 }
