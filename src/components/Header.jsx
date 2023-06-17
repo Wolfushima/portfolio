@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import scrollToId from '../utils/scrollToId';
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isBgTransparent, setIsBgTransparent] = useState(true);
+  const [hideHeader, setHideHeader] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const scrollPositionRef = useRef(null);
 
   const handleLiClick = (id) => {
     scrollToId(id);
@@ -16,12 +19,35 @@ const Header = () => {
     setIsNavOpen(!isNavOpen);
   };
 
-  const listenScrollEvent = () => {
-    if (window.scrollY === 0) {
-      return setIsBgTransparent(true);
+  const handleHideHeader = () => {
+    const isScrollDown = window.scrollY > scrollPositionRef.current;
+    const isScrollUp = window.scrollY < scrollPositionRef.current;
+    if (isScrollDown) {
+      setHideHeader(true);
+      return;
     }
-    return setIsBgTransparent(false);
+    if (isScrollUp) {
+      setHideHeader(false);
+    }
   };
+
+  const listenScrollEvent = () => {
+    setScrollPosition(window.scrollY);
+    handleHideHeader();
+  };
+
+  useEffect(() => {
+    if (scrollPosition > 0) {
+      setIsBgTransparent(false);
+      scrollPositionRef.current = scrollPosition;
+    }
+    if (scrollPosition === 0) {
+      const timer = setTimeout(() => {
+        setIsBgTransparent(true);
+      }, 300);
+      return () => clearTimeout(timer);
+    }
+  }, [scrollPosition]);
 
   useEffect(() => {
     window.addEventListener('scroll', listenScrollEvent);
@@ -43,7 +69,10 @@ const Header = () => {
   return (
     <header
       id="header"
-      className={isBgTransparent ? 'header bgTransparent' : 'header'}
+      className={`header
+          ${hideHeader ? 'hide' : ''}
+          ${isBgTransparent ? 'bgTransparent' : ''}
+      `}
     >
       <div className="header__wrapper">
         <div className="header__container">
