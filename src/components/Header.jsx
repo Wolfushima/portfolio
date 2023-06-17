@@ -53,7 +53,7 @@ const Header = () => {
             onClick={() => scrollToId('home')}
             aria-label="Adolfo Herrera"
           >
-            Adolfo Herrera
+            AH
           </button>
           <nav>
             <ul className={isNavOpen ? 'expanded' : null}>
