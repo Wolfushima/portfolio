@@ -31,6 +31,7 @@ const Home = () => (
               variants={homeVariants}
               href="https://www.linkedin.com/in/adolfoherreradev/"
               className="home__contact-logo"
+              aria-label="LinkedIn"
             >
               <LinkedInLogo />
             </motion.a>
@@ -38,6 +39,7 @@ const Home = () => (
               variants={homeVariants}
               href="https://github.com/Wolfushima"
               className="home__contact-logo"
+              aria-label="GitHub"
             >
               <GitHubLogo />
             </motion.a>
@@ -46,6 +48,7 @@ const Home = () => (
               type="button"
               className="home__contact-logo"
               onClick={() => scrollToId('contact')}
+              aria-label="Email"
             >
               <EmailIcon />
             </motion.button>
