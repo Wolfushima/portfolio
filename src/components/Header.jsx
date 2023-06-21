@@ -7,6 +7,10 @@ const Header = () => {
   const [hideHeader, setHideHeader] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const scrollPositionRef = useRef(null);
+  const [matchesMediaQuery, setMatchesMediaQuery] = useState(
+    window.matchMedia('(max-width: 768px)').matches
+  );
+  const [headerStyle, setHeaderStyle] = useState('bgTransparent');
 
   const handleLiClick = (id) => {
     scrollToId(id);
@@ -37,16 +41,27 @@ const Header = () => {
   };
 
   useEffect(() => {
-    if (scrollPosition > 0) {
-      setIsBgTransparent(false);
-      scrollPositionRef.current = scrollPosition;
-    }
-    if (scrollPosition === 0) {
-      const timer = setTimeout(() => {
-        setIsBgTransparent(true);
-      }, 300);
-      return () => clearTimeout(timer);
-    }
+    window
+      .matchMedia('(max-width: 768px)')
+      .addEventListener('change', (e) => setMatchesMediaQuery(e.matches));
+
+    return () =>
+      window.removeEventListener('change', (e) =>
+        setMatchesMediaQuery(e.matches)
+      );
+  }, [matchesMediaQuery]);
+
+  useEffect(() => {
+    if (isBgTransparent && !matchesMediaQuery)
+      return setHeaderStyle('bgTransparent');
+    if (hideHeader) return setHeaderStyle('hide');
+    return setHeaderStyle('');
+  }, [hideHeader, isBgTransparent, matchesMediaQuery]);
+
+  useEffect(() => {
+    scrollPositionRef.current = scrollPosition;
+    if (scrollPosition === 0) return setIsBgTransparent(true);
+    return setIsBgTransparent(false);
   }, [scrollPosition]);
 
   useEffect(() => {
@@ -67,13 +82,7 @@ const Header = () => {
   }, [isNavOpen]);
 
   return (
-    <header
-      id="header"
-      className={`header
-          ${hideHeader ? 'hide' : ''}
-          ${isBgTransparent ? 'bgTransparent' : ''}
-      `}
-    >
+    <header id="header" className={`header ${headerStyle}`}>
       <div className="header__wrapper">
         <div className="header__container">
           <button
