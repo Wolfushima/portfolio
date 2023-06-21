@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from './components/Header';
 import Home from './components/Home';
 import AboutMe from './components/AboutMe';
@@ -8,6 +8,10 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual';
+  }, []);
+
   return (
     <>
       <Header />
