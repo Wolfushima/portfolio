@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6a85fe33.css",
-    "main.js": "/static/js/main.bd616f60.js",
+    "main.js": "/static/js/main.2baf8f63.js",
     "static/media/polar.jpg": "/static/media/polar.ec1d478c5eac07fbde7b.jpg",
     "static/media/where-is-waldo-3.webp": "/static/media/where-is-waldo-3.5766abbb107d1d220ed5.webp",
     "static/media/where-is-waldo-2.webp": "/static/media/where-is-waldo-2.be13885da1bbdce010e6.webp",
@@ -54,6 +54,6 @@
   },
   "entrypoints": [
     "static/css/main.6a85fe33.css",
-    "static/js/main.bd616f60.js"
+    "static/js/main.2baf8f63.js"
   ]
 }
