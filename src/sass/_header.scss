@@ -2,8 +2,8 @@
   min-width: 320px;
   position: fixed;
   width: 100%;
-  min-height: 60px;
-  height: 60px;
+  min-height: 50px;
+  height: 50px;
   color: $light-text;
   background-color: $bg-light;
   z-index: 9999;
@@ -75,22 +75,18 @@
     }
     li {
       button {
-        font-size: $font-sm;
+        font-size: $font-xsm;
         background: none;
         border: none;
         cursor: pointer;
         font-family: 'Montserrat', sans-serif;
         transition: color 0.3s ease;
         text-transform: lowercase;
-        // color: #A6A6A6;
-        color: $dark-grey-text;
+        color: #454545;
         letter-spacing: 5px;
         margin-right: -5px;
         &:hover {
           color: darken($dark-grey-text, 5%);
-        }
-        @include breakpoint-down(medium) {
-          font-size: $font-xsm;
         }
       }
     }
