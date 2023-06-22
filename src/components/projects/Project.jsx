@@ -12,6 +12,25 @@ const ProjectButtons = ({ liveLink, codeLink }) => (
   </div>
 );
 
+const ProjectSkills = ({ projectSkills }) => (
+  <div className="projects__skills">
+    {projectSkills.map((skill, index) => (
+      <div className="projects__skill" key={index}>
+        <div className="projects__logo">
+          <img src={skill.src} alt={skill.alt} />
+        </div>
+        <span>{skill.alt}</span>
+      </div>
+    ))}
+  </div>
+);
+
+const ProjectDescription = ({ projectDescription }) => (
+  <div className="projects__description">
+    <p>{projectDescription}</p>
+  </div>
+);
+
 const Project = ({
   isFeatured,
   isRow,
@@ -43,18 +62,8 @@ const Project = ({
               imagePlaceholder={imagePlaceholder}
               projectTitle={projectTitle}
             />
-            <div className="projects__skills">
-              {projectSkills.map((skill, index) => (
-                <div className="projects__skill" key={index}>
-                  <div className="projects__logo">
-                    <img src={skill.src} alt={skill.alt} />
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="projects__description ">
-              <p>{projectDescription}</p>
-            </div>
+            <ProjectSkills projectSkills={projectSkills} />
+            <ProjectDescription projectDescription={projectDescription} />
             <ProjectButtons liveLink={liveLink} codeLink={codeLink} />
           </div>
         </div>
@@ -70,21 +79,11 @@ const Project = ({
               imagePlaceholder={imagePlaceholder}
               projectTitle={projectTitle}
             />
-            <div className="projects__skills">
-              {projectSkills.map((skill, index) => (
-                <div className="projects__skill" key={index}>
-                  <div className="projects__logo">
-                    <img src={skill.src} alt={skill.alt} />
-                  </div>
-                </div>
-              ))}
-            </div>
+            <ProjectSkills projectSkills={projectSkills} />
           </div>
           <div className="projects__right">
             <h4>{projectTitle}</h4>
-            <div className="projects__description">
-              <p>{projectDescription}</p>
-            </div>
+            <ProjectDescription projectDescription={projectDescription} />
             <ProjectButtons liveLink={liveLink} codeLink={codeLink} />
           </div>
         </div>
