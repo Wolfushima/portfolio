@@ -1,14 +1,7 @@
 .aboutme {
   background: $bg-light;
   &__wrapper {
-    padding: 5rem;
-    margin: 0 auto;
-    @include breakpoint-down(medium) {
-      padding: 5rem 3rem;
-    }
-    @include breakpoint-down(small) {
-      padding: 5rem 2rem;
-    }
+    padding: 10rem 0;
   }
   &__container {
     display: flex;
@@ -18,22 +11,32 @@
   }
   &__header {
     h3 {
-      @include h3($dark-grey-text)
+      @include h3(#454545)
     }
   }
   &__description {
-    font-family: 'Open Sans', sans-serif;
     width: 60%;
-    font-size: $font-sm;
     max-width: 1440px;
-    margin: 0 0 3rem 0;
-    line-height: 2;
+    margin: 0 0 10rem 0;
+    p {
+      font-family: 'Open Sans', sans-serif;
+      font-size: $font-sm;
+      line-height: 2;
+      max-width: 100ch;
+      margin: 0 auto;
+      color: $light-grey-text;
+    }
     @include breakpoint-up(x-large) {
       padding: 0 5rem;
     }
     @include breakpoint-down(small) {
+      p {
+        font-size: $font-xsm;
+      }
+    }
+    @include breakpoint-down(x-small) {
       width: 100%;
-      font-size: $font-xsm;
+      padding: 0 2rem;
     }
   }
   &__extra {
@@ -41,12 +44,22 @@
     flex-direction: row;
     background: rgb(141,136,167);
     background: linear-gradient(0deg, rgba(141,136,167,1) 0%, rgba(140,181,243,1) 100%);
-    padding: 2rem;
     gap: 2rem;
-    width: 80%;
-    max-width: 1440px;
-    @include breakpoint-down(medium) {
-      width: 100%;
+    box-shadow:
+      rgba(170, 170, 170, 0.4) 0 0 0px 0.4rem,
+      rgba(170, 170, 170, 0.3) 0 0 0px 0.8rem,
+      rgba(170, 170, 170, 0.2) 0 0 0px 1.2rem,
+      rgba(170, 170, 170, 0.1) 0 0 0px 1.6rem,
+      rgba(170, 170, 170, 0.05) 0 0 0px 1.8rem,
+      #f1f1f1 0 0 0 2rem;
+    border: 1px solid #039bff;
+    margin: 2rem;
+    padding: 10% 20vw;
+    @include breakpoint-down(small) {
+      padding: 10% 10vw;
+    }
+    @include breakpoint-down(x-small) {
+      padding: 2rem;
     }
   }
   &__extra-description {
