@@ -46,7 +46,7 @@ const Skills = () => (
           className="skills__skills"
           initial="hidden"
           whileInView="visible"
-          variants={{ visible: { transition: { staggerChildren: 0.5 } } }}
+          variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
           viewport={{ once: true }}
         >
           <SkillBox skillBoxTitle="Languages">
