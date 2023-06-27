@@ -14,17 +14,23 @@ const Footer = () => (
         </div>
         <div className="footer__contact">
           <div className="footer__icon">
-            <a href="https://www.linkedin.com/in/adolfoherreradev/">
+            <a
+              href="https://www.linkedin.com/in/adolfoherreradev/"
+              aria-label="LinkedIn"
+            >
               <LinkedInLogoSVG />
             </a>
           </div>
           <div className="footer__icon">
-            <a href="https://github.com/Wolfushima">
+            <a href="https://github.com/Wolfushima" aria-label="GitHub">
               <GitHubLogoSVG />
             </a>
           </div>
           <div className="footer__icon">
-            <a href="https://www.instagram.com/wolfushima/">
+            <a
+              href="https://www.instagram.com/wolfushima/"
+              aria-label="Instagram"
+            >
               <InstagramLogoSVG />
             </a>
           </div>
