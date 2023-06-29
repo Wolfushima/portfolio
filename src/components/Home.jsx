@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { ReactComponent as EmailIcon } from '../assets/contact/email-icon.svg';
 import { ReactComponent as LinkedInLogo } from '../assets/footer/linkedin-logo.svg';
 import { ReactComponent as GitHubLogo } from '../assets/skills/github-logo.svg';
+import { ReactComponent as LayeredWavesSVG } from '../assets/home/layered-waves-haikei.svg';
 import scrollToId from '../utils/scrollToId';
 
 const homeVariants = {
@@ -71,23 +72,11 @@ const Home = () => (
   <section id="home" className="home">
     <div className="home__wrapper">
       <div className="home__container">
+        <LayeredWavesSVG className="home__layered-waves" />
         <div className="home__center">
           <HomeHeaders />
-          <HomeContact />
         </div>
-        <div className="home__shape-divider-bottom">
-          <svg
-            data-name="Layer 1"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1200 120"
-            preserveAspectRatio="none"
-          >
-            <path
-              d="M1200 0L0 0 598.97 114.72 1200 0z"
-              className="shape-fill"
-            />
-          </svg>
-        </div>
+        <HomeContact />
       </div>
     </div>
   </section>
