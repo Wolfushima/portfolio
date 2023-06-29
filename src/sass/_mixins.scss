@@ -63,8 +63,11 @@ $breakpoints-down: (
   text-shadow:
     3px 0px 0px $textShadowColor,
     3px 3px 0px $textShadowColor;
+    @include breakpoint-down(medium) {
+      font-size: 1.8rem;
+    }
   @include breakpoint-down(small) {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
   @include breakpoint-down(x-small) {
     font-size: 1.5rem;
