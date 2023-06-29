@@ -1,9 +1,22 @@
 .home {
-  background-color: $bg-light;
-  background-image: url("data:image/svg+xml,%3Csvg width='44' height='12' viewBox='0 0 44 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 12v-2L0 0v10l4 2h16zm18 0l4-2V0L22 10v2h16zM20 0v8L4 0h16zm18 0L22 8V0h16z' fill='%23ffffff' fill-opacity='0.64' fill-rule='evenodd'/%3E%3C/svg%3E");
+  position: relative;
+  overflow: hidden;
   height: 100svh;
   min-height: 500px;
   width: 100%;
+  background: #161d9c;
+  background-image:
+  linear-gradient(to right, rgb(16, 67, 142, 0.6) 0%, rgb(8, 79, 74, 0.6) 100%),
+  url('../assets/home/stars-background.jpg');
+  background-position: center;
+  background-size: cover;
+  &__layered-waves {
+    position: absolute;
+    height: 80%;
+    width: 100%;
+    z-index: 1;
+    bottom: 0;
+  }
   &__wrapper {
     height: 100%;
     width: 100%;
@@ -15,28 +28,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+  } 
   &__center {
-    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: $bg-grey-dark;
-    background-image:
-    linear-gradient(180deg, rgba(32, 32, 32, 0.763), rgba(32, 32, 32, 0.763)),
-    url('../assets/home/stars-background.jpg');
-    background-position: center;
-    background-size: cover;
-    top: 0;
-    height: 85%;
-    width: calc(70.9% - 2vw);
-    z-index: 5;
-    overflow: hidden;
-    padding: 2rem;
-    @include breakpoint-down(x-small) {
-      padding: 1rem;
-    }
+    z-index: 2;
   }
   &__headers {
     display: flex;
@@ -87,11 +85,9 @@
     align-items: center;
     gap: 1rem;
     bottom: 2rem;
+    z-index: 2;
     @include breakpoint-down(small) {
       gap: 0.5rem;
-    }
-    @include breakpoint-down(x-small) {
-      bottom: 1rem;
     }
     @include breakpoint-down(xx-small) {
       gap: 0.1rem;
@@ -188,28 +184,10 @@
         }
         border-left: 2px solid $bg-light;
       }
-      svg{
+      svg {
         border: 1px solid white;
         padding: 5px;
       }
-    }
-  }
-  &__shape-divider-bottom {
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-    height: 100%;
-    z-index: 3;
-    svg {
-      position: relative;
-      display: block;
-      width: calc(100% + 1.3px);
-      height: 50.3%;
-    }
-    path {
-      fill: #b6b6b6;
     }
   }
 }
