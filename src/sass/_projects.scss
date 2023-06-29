@@ -1,51 +1,38 @@
 .projects {
-  background: rgb(241 241 241);
-  background-size: contain;
-  @media screen and (min-width:1900px) {
-    background-repeat: repeat-y;
-    background-size:cover;
+  background-color: #d0d2d6;
+  &__shape-divider-top,
+  &__shape-divider-bottom {
+    display: block;
+    width: 100%;
+    height: 20rem;
+    background-color: #242dc7;
   }
-  &__wrapper{
-    max-width: 1440px;
-    padding: 5rem;
-    margin: 0 auto;
-    @include breakpoint-down(medium) {
-      padding: 5rem 3rem;
-    }
-    @include breakpoint-down(small) {
-      padding: 5rem 2rem;
-    }
+  &__shape-divider-bottom {
+    transform: rotate(180deg);
   }
-  &__container {
+  &__content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 10rem 5rem;
+    @include breakpoint-down(medium) {
+      padding: 10rem 3rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 10rem 2rem;
+    }
   }
   &__header {
     h3 {
-      @include h3($dark-grey-text)
+      @include h3(#3D3D3D);
     }
   }
-  &__featured,
-  &__project {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    @include breakpoint-down(medium) {
-      width: 100%;
-    }
-    h4 {
-      color: #4F4F4F;
-      font-family: 'Manrope', sans-serif;
-      letter-spacing: 5px;
-      font-size: $font-lg;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-  }
+  &__wrapper
   &__image-placeholder {
     width: 100%;
     position: relative;
@@ -58,13 +45,58 @@
       opacity: 0;
     }
   }
+  &__wrapper {
+    margin-bottom: 13rem;
+  }
+  &__project {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h4 {
+      color: #3D3D3D;
+      font-family: 'Manrope', sans-serif;
+      letter-spacing: 5px;
+      font-size: $font-lg;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+  }
+  &__project.horizontal {
+    flex-direction: row;
+    gap: 5rem;
+  }
+  &__horizontal-right {
+    flex: 1;
+  }
+  &__horizontal-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    flex-grow: 2;
+    position: relative;
+  }
+  &__project.vertical {
+    flex-direction: column;
+    gap: 0;
+  }
+  &__vertical-top {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
   &__description {
     margin: 1rem 0;
     width: 100%;
     p {
-      color: $dark-grey-text;
+      color: #3D3D3D;
       font-family: 'Open Sans', sans-serif;
       font-size: $font-sm;
+      max-width: 100ch;
+      margin: 0 auto;
       @include breakpoint-down(small) {
         font-size: $font-xsm;
       }
@@ -86,54 +118,26 @@
       width: 100px;
     }
   }
-  &__project {
-    flex-direction: row;
-    gap: 2rem;
-    button {
-      background: $bg-grey;
-    }
-  }
-  &__right {
-    width: 40%;
-  }
-  &__left {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .horizontal {
-    background: transparent;
-  }
-  &__showmore {
-    a{
-      cursor: pointer;
-      text-decoration: none;
-      font-family: 'Open Sans', sans-serif;
-      color: $light-blue;
-      font-size: $font-xsm;
-      &:hover {
-        color: darken($light-blue, 3%);
-      }
-      &:active {
-        color: darken($light-blue, 5%);
-      }
-    }
-  }
-  &__wrapper.showmore {
-    padding-top: 0rem;
-
-    div.projects__container {
-      padding-top: 1rem;
-      border-top: 1px solid #dedede;
-    }
-  }
   &__slider {
-    width: 100%;
     position: relative;
     overflow: hidden;
-
+    box-shadow:
+      rgba(170, 170, 170, 0.4) 0 0 0px 0.4rem,
+      rgba(170, 170, 170, 0.3) 0 0 0px 0.8rem,
+      rgba(170, 170, 170, 0.2) 0 0 0px 1.2rem,
+      rgba(170, 170, 170, 0.1) 0 0 0px 1.6rem,
+      rgba(170, 170, 170, 0.05) 0 0 0px 1.8rem,
+      #ffffff 0 0 0 2rem;
+    margin: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #aeadad;
+    border: 1px solid #a4a4a4;
+    padding: 2rem;
+    @include breakpoint-down(medium) {
+      padding: 1rem;
+    }
     .next,
     .prev {
       position: absolute;
@@ -147,7 +151,6 @@
       z-index: 2;
       border: none;
       background: hsl(0deg 0% 0% / 73%);
-      color: $light-text;
       color: white;
       backdrop-filter: blur(2px);
       height: 30%;
@@ -157,14 +160,12 @@
         background: hsl(0deg 0% 0% / 76%)
       }
     }
-  
     .next {
       right: 0;
       border-top-left-radius: 1rem;
       border-bottom-left-radius: 1rem;
       border-right: none;
     }
-  
     .prev {
       left: 0;
       border-top-right-radius: 1rem;
@@ -175,20 +176,15 @@
   &__slider-image {
       position: absolute;
       width: 100%;
+      padding: 2rem;
+      @include breakpoint-down(medium) {
+        padding: 1rem;
+      }
   }
-  &__left {
+  &__horizontal-left {
     .next,
     .prev {
       height: 40%;
-    }
-  }
-  &__right {
-    margin-bottom: 3.5rem;
-    @include breakpoint-down(small) {
-      margin-bottom: 3.2rem;
-    }
-    @include breakpoint-down(x-small) {
-      margin-bottom: 3rem;
     }
   }
   &__skills {
@@ -197,12 +193,15 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    background: white;
+    background-color: white;
     border-radius: 10px;
     padding: 0.5rem 1rem;
     width: fit-content;
+    margin: 1rem 0;
+  }
+  &__skills-placeholder {
+    opacity: 0;
+    user-select: none;
   }
   &__skill {
     position: relative;
@@ -250,6 +249,25 @@
       height: 100%;
       object-fit: contain;
     }  
+  }
+  &__showmore {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      cursor: pointer;
+      text-decoration: none;
+      font-family: 'Open Sans', sans-serif;
+      color: $light-blue;
+      font-size: $font-xsm;
+      &:hover {
+        color: darken($light-blue, 3%);
+      }
+      &:active {
+        color: darken($light-blue, 5%);
+      }
+    }
   }
 }
 
