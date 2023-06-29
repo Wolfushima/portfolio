@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ProjectSlider from './ProjectSlider';
 
 const ProjectButtons = ({ liveLink, codeLink }) => (
@@ -25,6 +25,12 @@ const ProjectSkills = ({ projectSkills }) => (
   </div>
 );
 
+const ProjectSkillsPlaceHolder = ({ projectSkills }) => (
+  <div className="projects__skills-placeholder">
+    <ProjectSkills projectSkills={projectSkills} />
+  </div>
+);
+
 const ProjectDescription = ({ projectDescription }) => (
   <div className="projects__description">
     <p>{projectDescription}</p>
@@ -32,8 +38,7 @@ const ProjectDescription = ({ projectDescription }) => (
 );
 
 const Project = ({
-  isFeatured,
-  isRow,
+  verticalAlign,
   projectTitle,
   projectImages,
   projectDescription,
@@ -42,38 +47,37 @@ const Project = ({
   codeLink,
   projectSkills,
 }) => {
-  if (!isRow)
-    return (
-      <div
-        className={
-          isFeatured ? 'projects__wrapper' : 'projects__wrapper horizontal'
-        }
-      >
-        <div className="projects__container">
-          {isFeatured && (
-            <div className="projects__header">
-              <h3>PROJECTS</h3>
-            </div>
-          )}
-          <div className="projects__featured">
-            <h4>{projectTitle}</h4>
-            <ProjectSlider
-              images={projectImages}
-              imagePlaceholder={imagePlaceholder}
-              projectTitle={projectTitle}
-            />
-            <ProjectSkills projectSkills={projectSkills} />
-            <ProjectDescription projectDescription={projectDescription} />
-            <ProjectButtons liveLink={liveLink} codeLink={codeLink} />
-          </div>
-        </div>
-      </div>
-    );
+  const [projectClassName, setProjectClassName] = useState(
+    'projects__project vertical'
+  );
+  const [panelOneClassName, setPanelOneClassName] = useState(
+    'projects__vertical-top'
+  );
+  const [panelTwoClassName, setPanelTwoClassName] = useState(
+    'projects__vertical-bottom'
+  );
+
+  useEffect(() => {
+    if (verticalAlign) {
+      setProjectClassName('projects__project vertical');
+      setPanelOneClassName('projects__vertical-top');
+      setPanelTwoClassName('projects__vertical-bottom');
+    } else {
+      setProjectClassName('projects__project horizontal');
+      setPanelOneClassName('projects__horizontal-left');
+      setPanelTwoClassName('projects__horizontal-right');
+    }
+  }, [verticalAlign]);
+
   return (
-    <div className="projects__wrapper horizontal">
+    <div className="projects__wrapper">
       <div className="projects__container">
-        <div className="projects__project">
-          <div className="projects__left">
+        <div className={projectClassName}>
+          <div className={panelOneClassName}>
+            {verticalAlign && <h4>{projectTitle}</h4>}
+            {!verticalAlign && (
+              <ProjectSkillsPlaceHolder projectSkills={projectSkills} />
+            )}
             <ProjectSlider
               images={projectImages}
               imagePlaceholder={imagePlaceholder}
@@ -81,8 +85,8 @@ const Project = ({
             />
             <ProjectSkills projectSkills={projectSkills} />
           </div>
-          <div className="projects__right">
-            <h4>{projectTitle}</h4>
+          <div className={panelTwoClassName}>
+            {!verticalAlign && <h4>{projectTitle}</h4>}
             <ProjectDescription projectDescription={projectDescription} />
             <ProjectButtons liveLink={liveLink} codeLink={codeLink} />
           </div>
