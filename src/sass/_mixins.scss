@@ -59,10 +59,6 @@ $breakpoints-down: (
   color: $color;
   margin-bottom: 3.5rem;
   font-size: $font-xlg;
-  $textShadowColor: lighten($color, 50%);
-  text-shadow:
-    3px 0px 0px $textShadowColor,
-    3px 3px 0px $textShadowColor;
     @include breakpoint-down(medium) {
       font-size: 1.8rem;
     }
