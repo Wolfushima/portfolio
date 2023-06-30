@@ -29,40 +29,40 @@ const AboutMe = () => (
   <section id="aboutme" className="aboutme">
     <div className="aboutme__wrapper">
       <div className="aboutme__container">
-        <div className="aboutme__header">
-          <h3>ABOUT ME</h3>
-        </div>
-        <div className="aboutme__description">
-          <p>
-            I am a web developer with a passion for creating engaging and
-            dynamic user experiences. I am proficient in React, JavaScript,
-            HTML, and CSS. Through my journey of self-discovery and learning, I
-            have honed my skills and developed a keen eye for detail. I am
-            always striving to improve and expand my knowledge, and I am excited
-            to take on new challenges in the world of web development.
-          </p>
+        <div className="aboutme__left">
+          <div className="aboutme__header">
+            <h3>ABOUT ME</h3>
+          </div>
+          <div className="aboutme__description">
+            <p>Hello! I&apos;m Adolfo,</p>
+            <p>
+              a web developer with a degree in electronic engineering and a love
+              for design. I strive to create engaging user experiences through
+              efficient and quality code.
+            </p>
+          </div>
         </div>
         <div className="aboutme__extra">
-          <div className="aboutme__extra-description">
+          <div className="aboutme__extra-description placeholder">
             <p>
               In addition to web development, I have a strong creative side that
               I express through playing the guitar and drawing.
             </p>
           </div>
           <motion.div
-            className="aboutme__images"
+            className="aboutme__image-container"
             initial="hidden"
             whileInView="visible"
             variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
             viewport={{ once: true }}
           >
             <AboutMeImage
-              imageSrc={Deer}
-              imageAlt="Deer - Wolfushima Original Artwork"
-            />
-            <AboutMeImage
               imageSrc={Polar}
               imageAlt="Polar - Wolfushima Original Artwork"
+            />
+            <AboutMeImage
+              imageSrc={Deer}
+              imageAlt="Deer - Wolfushima Original Artwork"
             />
             <AboutMeImage
               imageSrc={Bird}
@@ -73,6 +73,12 @@ const AboutMe = () => (
               imageAlt="Dolphin - Wolfushima Original Artwork"
             />
           </motion.div>
+          <div className="aboutme__extra-description">
+            <p>
+              In addition to web development, I have a strong creative side that
+              I express through playing the guitar and drawing.
+            </p>
+          </div>
         </div>
       </div>
     </div>
