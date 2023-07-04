@@ -1,5 +1,5 @@
 .skills {
-  background: $bg-light;
+  background-color: #242dc7;
   &__wrapper {
     max-width: 1440px;
     margin: 0 auto;
@@ -19,7 +19,7 @@
   }
   &__header {
     h3 {
-      @include h3(#454545);
+      @include h3(#DEE0FC);
     }
   }
   &__skills {
@@ -33,17 +33,16 @@
   &__box {
     display: flex;
     flex-direction: column;
-    background: white;
     border-radius: 10px;
     padding: 1rem;
     flex: 1;
-    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgb(255 255 255 / 32%) 0px 2px 16px 0px;
+    gap: 0.5rem;
   }
   &__box-title {
     font-family: 'Manrope', sans-serif;
     letter-spacing: 3px;
     font-size: $font-sm;
-    color: #464646;
+    color: #DEE0FC;
     white-space: nowrap;
   }
   &__box-items {
@@ -53,6 +52,8 @@
     gap: 2rem;
     padding: 1rem;
     gap: 1rem;
+    background-color: white;
+    border-radius: 10px;
   }
   &__skill {
     display: flex;
