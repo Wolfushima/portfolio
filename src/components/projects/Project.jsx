@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import ProjectSlider from './ProjectSlider';
+import ProjectSkillsCarousel from './ProjectSkillsCarousel';
 
 const ProjectButtons = ({ liveLink, codeLink }) => (
   <div className="projects__buttons">
@@ -9,25 +10,6 @@ const ProjectButtons = ({ liveLink, codeLink }) => (
     <div className="projects__button">
       <a href={codeLink}>Code</a>
     </div>
-  </div>
-);
-
-const ProjectSkills = ({ projectSkills }) => (
-  <div className="projects__skills">
-    {projectSkills.map((skill, index) => (
-      <div className="projects__skill" key={index}>
-        <div className="projects__logo">
-          <img src={skill.src} alt={skill.alt} />
-        </div>
-        <span>{skill.alt}</span>
-      </div>
-    ))}
-  </div>
-);
-
-const ProjectSkillsPlaceHolder = ({ projectSkills }) => (
-  <div className="projects__skills-placeholder">
-    <ProjectSkills projectSkills={projectSkills} />
   </div>
 );
 
@@ -75,15 +57,12 @@ const Project = ({
         <div className={projectClassName}>
           <div className={panelOneClassName}>
             {verticalAlign && <h4>{projectTitle}</h4>}
-            {!verticalAlign && (
-              <ProjectSkillsPlaceHolder projectSkills={projectSkills} />
-            )}
             <ProjectSlider
               images={projectImages}
               imagePlaceholder={imagePlaceholder}
               projectTitle={projectTitle}
             />
-            <ProjectSkills projectSkills={projectSkills} />
+            <ProjectSkillsCarousel projectSkills={projectSkills} />
           </div>
           <div className={panelTwoClassName}>
             {!verticalAlign && <h4>{projectTitle}</h4>}
