@@ -20,17 +20,96 @@
     max-width: 1440px;
     margin: 0 auto;
     padding: 10rem 5rem;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: calc(100% - 20rem);
+      background-color: #acb1b9;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
     @include breakpoint-down(medium) {
       padding: 10rem 3rem;
     }
     @include breakpoint-down(small) {
-      padding: 10rem 2rem;
+      padding: 5rem 2rem;
+      &::after {
+        height: calc(100% - 10rem);
+      }
     }
   }
   &__header {
+    border: 1px solid #acb1b9;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    background-color: #d0d2d6;
+    z-index: 2;
     h3 {
       @include h3(#3D3D3D);
+      margin-bottom: 0;
     }
+  }
+  &__featured {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 3vw;
+    gap: 5rem;
+    margin: 5rem 0;
+    margin-top: 2rem;
+    @include breakpoint-down(medium) {
+      padding: 1rem 0;
+    }
+    @include breakpoint-down(small) {
+      z-index: 2;
+      background-color: #d0d2d6;
+      border-radius: 10px;
+      border: 1px solid #acb1b9;
+      padding: 2rem;
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+    background: #acb1b9;
+    border-radius: 10px;
+    padding: 5rem;
+    z-index: 2;
+    width: 100%;
+    max-width: 100%;
+    @include breakpoint-down(medium) {
+      padding: 3rem;
+      gap: 3rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 2rem;
+      gap: 2rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint-down(x-small) {
+      padding: 2rem;
+      gap: 5rem;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &__grid &__project {
+    h4 {
+      white-space: nowrap;
+    }
+  }
+  &__grid &__buttons {
+    gap: 0.5rem;
+    a {
+      height: 30px;
+      width: 70px;
+      font-size: $font-xsm;
+    }
+  }
+  &__grid &__wrapper {
+    margin-bottom: 0;
   }
   &__wrapper
   &__image-placeholder {
@@ -45,28 +124,31 @@
       opacity: 0;
     }
   }
-  &__wrapper {
-    margin-bottom: 13rem;
-  }
   &__project {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     h4 {
       color: #3D3D3D;
       font-family: 'Manrope', sans-serif;
       letter-spacing: 5px;
       font-size: $font-lg;
-      margin-bottom: 2rem;
-      text-align: center;
+      margin-bottom: 1rem;
+      @include breakpoint-down(medium) {
+        font-size: $font-med;
+      }
     }
   }
   &__project.horizontal {
     flex-direction: row;
     gap: 5rem;
+    position: relative;
   }
   &__horizontal-right {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
   &__horizontal-left {
     display: flex;
@@ -74,12 +156,14 @@
     justify-content: center;
     align-items: center;
     flex: 1;
-    flex-grow: 2;
     position: relative;
   }
   &__project.vertical {
     flex-direction: column;
     gap: 0;
+    h4 {
+      text-align: center;
+    }
   }
   &__vertical-top {
     position: relative;
@@ -87,17 +171,22 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
+  }
+  &__vertical-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   &__description {
     margin: 1rem 0;
-    width: 100%;
     p {
       color: #3D3D3D;
       font-family: 'Open Sans', sans-serif;
       font-size: $font-sm;
-      max-width: 100ch;
-      margin: 0 auto;
-      @include breakpoint-down(small) {
+      max-width: 50ch;
+      @include breakpoint-down(medium) {
         font-size: $font-xsm;
       }
     }
@@ -105,7 +194,6 @@
   &__buttons {
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     gap: 1rem;
     a {
@@ -117,27 +205,33 @@
       min-width: 50px;
       width: 100px;
     }
+    @include breakpoint-down(medium) {
+      a {
+        width: 90px;
+        font-size: $font-xsm;
+      }
+    }
   }
+  //////////////////////////////////////////////////////////
+  &__project.horizontal &__slider {
+    //  46px from:
+    //    -> 24px of &__logo height
+    //    -> 22px of &__skill span
+    margin-top: calc(46px + 1rem);
+    @include breakpoint-down(small) {
+      margin-top: calc(41px + 1rem);
+    }
+  }
+  //////////////////////////////////////////////////////////
   &__slider {
     position: relative;
     overflow: hidden;
-    box-shadow:
-      rgba(170, 170, 170, 0.4) 0 0 0px 0.4rem,
-      rgba(170, 170, 170, 0.3) 0 0 0px 0.8rem,
-      rgba(170, 170, 170, 0.2) 0 0 0px 1.2rem,
-      rgba(170, 170, 170, 0.1) 0 0 0px 1.6rem,
-      rgba(170, 170, 170, 0.05) 0 0 0px 1.8rem,
-      #ffffff 0 0 0 2rem;
-    margin: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
     background: #aeadad;
     border: 1px solid #a4a4a4;
-    padding: 2rem;
-    @include breakpoint-down(medium) {
-      padding: 1rem;
-    }
+    margin-bottom: 1rem;
     .next,
     .prev {
       position: absolute;
@@ -176,10 +270,6 @@
   &__slider-image {
       position: absolute;
       width: 100%;
-      padding: 2rem;
-      @include breakpoint-down(medium) {
-        padding: 1rem;
-      }
   }
   &__horizontal-left {
     .next,
@@ -187,74 +277,18 @@
       height: 40%;
     }
   }
-  &__skills {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    background-color: white;
-    border-radius: 10px;
-    padding: 0.5rem 1rem;
-    width: fit-content;
-    margin: 1rem 0;
-  }
-  &__skills-placeholder {
-    opacity: 0;
-    user-select: none;
-  }
-  &__skill {
-    position: relative;
-    cursor: default;
-    span {
-      display: none;
-      position: absolute;
-      left: 50%;
-      top: 115%;
-      transform: translate(-50%, 0%);
-      font-family: 'Montserrat', sans-serif;
-      font-size: 9px;
-      padding: 2.5px 5px;
-      text-align: center;
-      border-radius: 5px;
-      border: 1px solid #00000029;
-      background-color: #f1f1f1;
-      min-width: 200%;
-    }
-    &:hover {
-      span {
-        display: block;
-      }
-    }
-  }
-  &__logo {
-    height: 1.5rem;
-    width: 1.5rem;
-    max-width: 1.5rem;
-    max-height: 1.5rem;
-    @include breakpoint-down(small) {
-      height: 1.2rem;
-      width: 1.2rem;
-      max-width: 1.2rem;
-      max-height: 1.2rem;
-    }
-    @include breakpoint-down(x-small) {
-      height: 1rem;
-      width: 1rem;
-      max-width: 1rem;
-      max-height: 1rem;
-    }
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }  
-  }
   &__showmore {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: fit-content;
+    border: 1px solid #acb1b9;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    background-color: #d0d2d6;
+    z-index: 2;
+    margin-top: 2rem;
     a {
       cursor: pointer;
       text-decoration: none;
@@ -268,6 +302,109 @@
         color: darken($light-blue, 5%);
       }
     }
+  }
+  ///// CAROUSEL
+  &__grid &__skills-carousel {
+    height: calc(16px + 22px);
+    width: calc(32px * 4);
+  }
+  &__grid &__logo {
+    height: 16px;
+    width: 16px;
+    max-width: 16px;
+    max-height: 16px;
+  }
+  &__skills-carousel {
+    background-color: transparent;
+    overflow: hidden;
+    position: relative;
+    //  The height is determined by the sum of:
+    //  -> 24px of &__logo height
+    //  -> 22px of &__skill span:
+    //        (9px of span font-size)
+    //        (5px of span padding (2.5px top, 2.5px bottom))
+    //        (2px of span border (1px top, 1px bottom))
+    //        (6px of span top 3px * 2)
+    height: calc(24px + 22px);
+    //  The width is determined by the sum of:
+    //  -> 24px of &__logo height
+    //  -> 16px of &__logo margin (8px left, 8px right)
+    //  -> 5 is the max number of logos
+    width: calc(40px * 5);
+    @include breakpoint-down(small) {
+      height: calc(19px + 22px);
+      width: calc(35px * 5);
+    }
+    @include breakpoint-down(x-small) {
+      height: calc(16px + 22px);
+      width: calc(32px * 5);
+    }
+  }
+  &__skills {
+    display: flex;
+    background-color: transparent;
+    width: max-content;
+    animation-name: carouselScroll;
+    animation-duration: 35s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    @keyframes carouselScroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-100% / 2));
+      }
+    }
+  }
+  &__skill {
+    position: relative;
+    cursor: default;
+    span {
+      display: none;
+      position: absolute;
+      left: 50%;
+      top: calc(100% + 3px);
+      transform: translate(-50%, 0%);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 9px;
+      padding: 2.5px 5px;
+      text-align: center;
+      border-radius: 5px;
+      border: 1px solid #00000029;
+      background-color: #f1f1f1;
+      min-width: 100%;
+      white-space: nowrap;
+    }
+    &:hover {
+      span {
+        display: block;
+      }
+    }
+  }
+  &__logo {
+    height: 24px;
+    width: 24px;
+    max-width: 24px;
+    max-height: 24px;
+    margin: 0 8px;
+    @include breakpoint-down(small) {
+      height: 19px;
+      width: 19px;
+      max-width: 19px;
+      max-height: 19px;
+    }
+    @include breakpoint-down(x-small) {
+      height: 16px;
+      width: 16px;
+      max-width: 16px;
+      max-height: 16px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }  
   }
 }
 
