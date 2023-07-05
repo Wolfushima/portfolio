@@ -2,9 +2,11 @@ import React from 'react';
 import { ReactComponent as LinkedInLogoSVG } from '../assets/footer/linkedin-logo.svg';
 import { ReactComponent as GitHubLogoSVG } from '../assets/skills/github-logo.svg';
 import { ReactComponent as InstagramLogoSVG } from '../assets/footer/instagram-logo.svg';
+import { ReactComponent as LayeredWavesSVG } from '../assets/home/layered-waves-haikei.svg';
 
 const Footer = () => (
   <footer id="footer" className="footer">
+    <LayeredWavesSVG className="footer__layered-waves" />
     <div className="footer__wrapper">
       <div className="footer__container">
         <div className="footer__author">
