@@ -1,9 +1,33 @@
 .footer {
-  background: $bg-light;
+  background-color: #292d7b;
+  background-image:
+  linear-gradient(to right, rgb(16, 67, 142, 0.6) 0%, rgb(8, 79, 74, 0.6) 100%),
+  url('../assets/home/stars-background.jpg');
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  /* svg margin fix */
+  &::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: #242dc7;
+    top: -2px;
+  }
+  /* */
+  &__layered-waves {
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: rotate(180deg);
+  }
   &__wrapper {
     max-width: 1440px;
     padding: 10rem 5rem 15rem 5rem;
     margin: 0 auto;
+    position: inherit;
     @include breakpoint-down(medium) {
       padding: 10rem 3rem 15rem 3rem;
     }
@@ -33,7 +57,7 @@
     p, span {
       font-family: 'Manrope', sans-serif;
       font-size: $font-sm;
-      color: #454545;
+      color: #DEE0FC;
     }
     p {
       font-weight: 900;
@@ -59,21 +83,35 @@
     }
   }
   &__icon {
-    width: 1.5rem;
-    max-width: 1.5rem;
-    height: 1.5rem;
-    max-height: 1.5rem;
+    width: 1.7rem;
+    max-width: 1.7rem;
+    height: 1.7rem;
+    max-height: 1.7rem;
     svg {
       cursor: pointer;
       width: 100%;
       height: 100%;
       object-fit: contain;
+      border: 1px solid transparent;
+      transition: all 0.3s ease;
       path {
         transition: all 0.3s ease;
-        fill: #454545;
+        fill: #DEE0FC;
       }
     }
     @include breakpoint-down(small) {
+      width: 1.5rem;
+      max-width: 1.5rem;
+      height: 1.5rem;
+      max-height: 1.5rem;
+    }
+    @include breakpoint-down(x-small) {
+      width: 1.4rem;
+      max-width: 1.4rem;
+      height: 1.4rem;
+      max-height: 1.4rem;
+    }
+    @include breakpoint-down(xx-small) {
       width: 1.2rem;
       max-width: 1.2rem;
       height: 1.2rem;
@@ -81,9 +119,8 @@
     }
     &:hover {
       svg {
-        path {
-          fill: #0e0e0e;
-        }
+        border: 1px solid #DEE0FC;
+        padding: 5px;
       }
     }
   }
