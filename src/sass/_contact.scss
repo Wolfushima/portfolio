@@ -1,17 +1,12 @@
 .contact {
-  background: $bg-grey-dark;
-  background-image:
-  linear-gradient(180deg, rgba(32, 32, 32, 0.763), rgba(32, 32, 32, 0.763)),
-  url('../assets/home/stars-background.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  border-top: 1px solid #039bff;
+  background-color: #242dc7; 
   &__wrapper{
     max-width: 1440px;
-    padding: 5rem;
+    padding: 10rem;
     margin: 0 auto;
     @include breakpoint-down(medium) {
-      padding: 5rem 3rem;
+      padding: 10rem 3rem;
     }
     @include breakpoint-down(small) {
       padding: 5rem 2rem;
@@ -25,7 +20,7 @@
   }
   &__header {
     h3 {
-      @include h3($light-text)
+      @include h3(#DEE0FC);
     }
   }
   &__msg {
@@ -33,7 +28,7 @@
     p {
       font-size: $font-sm;
       font-family: 'Open Sans', sans-serif;
-      color: $grey-text;
+      color: #DEE0FC;
     }
   }
   &__button {
@@ -70,14 +65,14 @@
       gap: 0.5rem;
       font-size: $font-xsm;
       font-family: 'Open Sans', sans-serif;
-      color: $light-text;
+      color: #DEE0FC;
       font-weight: 900;
     }
     input,
     textarea {
-      background: $bg-light;
+      background: white;
       border-radius: none;
-      border: 1px solid $grey-text;
+      border: none;
       padding: 0.5rem;
       font-size: $font-sm;
       font-family: 'Open Sans', sans-serif;
