@@ -32,39 +32,32 @@ const HomeContact = () => (
     animate="visible"
     exit={{ opacity: 0, transition: { duration: 1 } }}
     variants={{
-      visible: {
-        transition: {
-          delayChildren: 1,
-          staggerChildren: 0.3,
-        },
-      },
+      hidden: { opacity: 0, y: 10 },
+      visible: { opacity: 1, y: 0, transition: { delay: 1, duration: 0.5 } },
     }}
   >
-    <motion.a
-      variants={homeVariants}
+    <a
       href="https://www.linkedin.com/in/adolfoherreradev/"
       className="home__contact-logo"
       aria-label="LinkedIn"
     >
       <LinkedInLogo />
-    </motion.a>
-    <motion.a
-      variants={homeVariants}
+    </a>
+    <a
       href="https://github.com/Wolfushima"
       className="home__contact-logo"
       aria-label="GitHub"
     >
       <GitHubLogo />
-    </motion.a>
-    <motion.button
-      variants={homeVariants}
+    </a>
+    <button
       type="button"
       className="home__contact-logo"
       onClick={() => scrollToId('contact')}
       aria-label="Email"
     >
       <EmailIcon />
-    </motion.button>
+    </button>
   </motion.div>
 );
 
