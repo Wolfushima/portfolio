@@ -6,7 +6,9 @@ import { ReactComponent as LayeredWavesSVG } from '../assets/home/layered-waves-
 
 const Footer = () => (
   <footer id="footer" className="footer">
-    <LayeredWavesSVG className="footer__layered-waves" />
+    <div className="svg-divider-top">
+      <LayeredWavesSVG className="footer__shape-divider-top" />
+    </div>
     <div className="footer__wrapper">
       <div className="footer__container">
         <div className="footer__author">
