@@ -75,8 +75,8 @@ const Home = () => (
         <LayeredWavesSVG className="home__layered-waves" />
         <div className="home__center">
           <HomeHeaders />
+          <HomeContact />
         </div>
-        <HomeContact />
       </div>
     </div>
   </section>

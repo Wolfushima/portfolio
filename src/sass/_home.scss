@@ -61,6 +61,15 @@
     justify-content: center;
     align-items: center;
     z-index: 2;
+    ///
+    /// 
+    /// 
+    /// 
+    position: relative;
+    ///
+    /// 
+    /// 
+    /// 
   }
   &__headers {
     display: flex;
@@ -110,8 +119,14 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    bottom: 2rem;
+    // bottom: 2rem;
     z-index: 2;
+    ////
+    /// 
+    /// 
+    top: calc(100% + 2rem);
+    /// 
+    /// 
     @include breakpoint-down(small) {
       gap: 0.5rem;
     }
@@ -142,10 +157,10 @@
     &:not(:first-child):not(:last-child)::after {
       width: 1px;
       height: 100%;
-      margin-top: 100%;
       left: 50%;
       top: 100vh;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, 0%); 
+      height: 100vh;
     }
     &:first-child::after {
       width: 100vw;
@@ -194,7 +209,7 @@
       }
       &:not(:first-child):not(:last-child) {
         &::after {
-          top: 50%;
+          top: 100%;
         }
         border-bottom: 2px solid $bg-light;
       }
