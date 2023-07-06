@@ -11,11 +11,6 @@ const Footer = () => (
     </div>
     <div className="footer__wrapper">
       <div className="footer__container">
-        <div className="footer__author">
-          <p>
-            Adolfo Herrera <span>- Copyright 2023</span>
-          </p>
-        </div>
         <div className="footer__contact">
           <div className="footer__icon">
             <a
@@ -38,6 +33,11 @@ const Footer = () => (
               <InstagramLogoSVG />
             </a>
           </div>
+        </div>
+        <div className="footer__author">
+          <p>
+            Adolfo Herrera <span>- Copyright 2023</span>
+          </p>
         </div>
       </div>
     </div>
