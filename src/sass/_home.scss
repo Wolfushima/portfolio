@@ -1,6 +1,5 @@
 .home {
   position: relative;
-  overflow: hidden;
   height: 100svh;
   min-height: 500px;
   width: 100%;
@@ -10,6 +9,32 @@
   url('../assets/home/stars-background.jpg');
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+  @include breakpoint-up(large) {
+    background-image:
+    linear-gradient(to right, rgb(16, 67, 142, 0.6) 0%, rgb(8, 79, 74, 0.6) 100%),
+    url('../assets/home/stars-background-large.jpg');
+  }
+  &::after {
+    content: '';
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: transparent;
+    background: linear-gradient(0deg, rgba(222, 222, 222, 0.4) 0%, transparent 100%);
+  }
+  /* svg margin fix */
+  &::before {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    background-color: #242dc7;
+    bottom: -2px;
+    z-index: 10;
+  }
+  /* */
   &__layered-waves {
     position: absolute;
     height: 80%;
@@ -18,6 +43,7 @@
     bottom: 0;
   }
   &__wrapper {
+    overflow: hidden;
     height: 100%;
     width: 100%;
   }
