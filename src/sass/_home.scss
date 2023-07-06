@@ -61,15 +61,7 @@
     justify-content: center;
     align-items: center;
     z-index: 2;
-    ///
-    /// 
-    /// 
-    /// 
     position: relative;
-    ///
-    /// 
-    /// 
-    /// 
   }
   &__headers {
     display: flex;
@@ -80,7 +72,7 @@
     p, h1, h2 {
       font-family: 'Manrope', sans-serif;
       font-size: $font-sm;
-      color: $light-text;
+      color: #DEE0FC;
       letter-spacing: 5px;
       margin-right: -5px;
       font-weight: 100;
@@ -90,7 +82,7 @@
       font-family: 'Mate SC', serif;
       font-size: 2rem;
       background: transparent;
-      background: linear-gradient(to right, #cbf8ff 0%, #d0c8ff 100%);
+      background: linear-gradient(to right, #cbf8ff 0%, #DEE0FC 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -119,14 +111,8 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    // bottom: 2rem;
     z-index: 2;
-    ////
-    /// 
-    /// 
-    top: calc(100% + 2rem);
-    /// 
-    /// 
+    top: calc(100% + 2rem); 
     @include breakpoint-down(small) {
       gap: 0.5rem;
     }
@@ -147,7 +133,7 @@
     position: relative;
     &::after {
       content: '';
-      background-color: $bg-light;
+      background-color: #DEE0FC;
       position: absolute;
       top: 50%;
       transition: all 0.3s ease;
@@ -182,7 +168,7 @@
       border: 1px solid transparent;
       transition: all 0.3s ease;
       path {
-        fill: $bg-light;
+        fill: #DEE0FC;
       }
       @include breakpoint-down(small) {
         width: 1.5rem;
@@ -211,22 +197,22 @@
         &::after {
           top: 100%;
         }
-        border-bottom: 2px solid $bg-light;
+        border-bottom: 2px solid #DEE0FC;
       }
       &:last-child {
         &::after {
           left: 0;
         }
-        border-right: 2px solid $bg-light;
+        border-right: 2px solid #DEE0FC;
       }
       &:first-child {
         &::after {
           right: 0;
         }
-        border-left: 2px solid $bg-light;
+        border-left: 2px solid #DEE0FC;
       }
       svg {
-        border: 1px solid white;
+        border: 1px solid #DEE0FC;
         padding: 5px;
       }
     }
