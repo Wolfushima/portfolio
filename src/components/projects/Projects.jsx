@@ -22,7 +22,9 @@ const Projects = () => {
 
   return (
     <section id="projects" className="projects">
-      <ShapeDividerSVG className="projects__shape-divider-top" />
+      <div className="svg-divider-top">
+        <ShapeDividerSVG className="projects__shape-divider-top" />
+      </div>
       <div className="projects__content">
         <div className="projects__header">
           <h3>PROJECTS</h3>
@@ -87,7 +89,9 @@ const Projects = () => {
           <a href="https://github.com/Wolfushima">Show More</a>
         </div>
       </div>
-      <ShapeDividerSVG className="projects__shape-divider-bottom" />
+      <div className="svg-divider-bottom">
+        <ShapeDividerSVG className="projects__shape-divider-bottom" />
+      </div>
     </section>
   );
 };
