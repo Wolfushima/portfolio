@@ -35,8 +35,6 @@
     @include breakpoint-down(x-small) {
       flex-direction: column;
       gap: 2rem;
-    }
-    @include breakpoint-down(x-small) {
       &::after {
         content: none;
       }
@@ -60,7 +58,6 @@
       font-family: 'Open Sans', sans-serif;
       font-size: $font-sm;
       line-height: 2;
-      max-width: 100ch;
       color: #DEE0FC;
       max-width: 50ch;
     }
