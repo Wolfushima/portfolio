@@ -131,6 +131,12 @@
   &__grid &__project {
     h4 {
       white-space: nowrap;
+      color: #262626;
+    }
+  }
+  &__grid &__description {
+    p {
+      color: #262626;
     }
   }
   &__grid &__buttons {
