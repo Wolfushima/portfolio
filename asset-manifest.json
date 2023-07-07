@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.9aed53aa.css",
+    "main.css": "/static/css/main.3382935c.css",
     "main.js": "/static/js/main.661c5940.js",
     "static/media/stars-background-large.jpg": "/static/media/stars-background-large.02670a8b29662677f4fd.jpg",
     "static/media/polar.jpg": "/static/media/polar.ec1d478c5eac07fbde7b.jpg",
@@ -56,7 +56,7 @@
     "static/media/email-icon.svg": "/static/media/email-icon.c3d637566a42b8bdd10b09cf38477fc2.svg"
   },
   "entrypoints": [
-    "static/css/main.9aed53aa.css",
+    "static/css/main.3382935c.css",
     "static/js/main.661c5940.js"
   ]
 }
