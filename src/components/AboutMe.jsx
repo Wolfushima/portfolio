@@ -1,20 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Deer from '../assets/aboutme/deer.jpg';
-import Polar from '../assets/aboutme/polar.jpg';
-import Bird from '../assets/aboutme/bird.jpg';
-import Dolphin from '../assets/aboutme/dolphin.jpg';
+import ABOUTME_IMAGES from '../data/aboutme/aboutme-images';
 
 const imageVariants = {
   hidden: { opacity: 0, y: 10 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
-const AboutMeImage = ({ imageSrc, imageAlt }) => (
+const AboutMeImage = ({ image }) => (
   <motion.div className="aboutme__image" variants={imageVariants}>
     <motion.img
-      src={imageSrc}
-      alt={imageAlt}
+      src={image.src}
+      srcSet={image.srcSet}
+      alt={image.alt}
       whileHover={{ scale: 1.3 }}
       transition={{
         type: 'spring',
@@ -56,22 +54,10 @@ const AboutMe = () => (
             variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
             viewport={{ once: true }}
           >
-            <AboutMeImage
-              imageSrc={Polar}
-              imageAlt="Polar - Wolfushima Original Artwork"
-            />
-            <AboutMeImage
-              imageSrc={Deer}
-              imageAlt="Deer - Wolfushima Original Artwork"
-            />
-            <AboutMeImage
-              imageSrc={Bird}
-              imageAlt="Bird - Wolfushima Original Artwork"
-            />
-            <AboutMeImage
-              imageSrc={Dolphin}
-              imageAlt="Dolphin - Wolfushima Original Artwork"
-            />
+            <AboutMeImage image={ABOUTME_IMAGES.POLAR} />
+            <AboutMeImage image={ABOUTME_IMAGES.DEER} />
+            <AboutMeImage image={ABOUTME_IMAGES.BIRD} />
+            <AboutMeImage image={ABOUTME_IMAGES.DOLPHIN} />
           </motion.div>
           <div className="aboutme__extra-description">
             <p>
