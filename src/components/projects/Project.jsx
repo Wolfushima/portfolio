@@ -24,7 +24,6 @@ const Project = ({
   projectTitle,
   projectImages,
   projectDescription,
-  imagePlaceholder,
   liveLink,
   codeLink,
   projectSkills,
@@ -57,11 +56,7 @@ const Project = ({
         <div className={projectClassName}>
           <div className={panelOneClassName}>
             {verticalAlign && <h4>{projectTitle}</h4>}
-            <ProjectSlider
-              images={projectImages}
-              imagePlaceholder={imagePlaceholder}
-              projectTitle={projectTitle}
-            />
+            <ProjectSlider images={projectImages} />
             <ProjectSkillsCarousel projectSkills={projectSkills} />
           </div>
           <div className={panelTwoClassName}>

@@ -27,10 +27,10 @@ const swipePower = (offset, velocity) => {
   return Math.abs(offset) * velocity;
 };
 
-const ProjectSlider = ({ images, imagePlaceholder, projectTitle }) => {
+const ProjectSlider = ({ images }) => {
   const [[page, direction], setPage] = useState([0, 0]);
 
-  const imageIndex = wrap(0, images.length, page);
+  const imageIndex = wrap(0, images.src.length, page);
 
   const paginate = (newDirection) => {
     setPage([page + newDirection, newDirection]);
@@ -46,9 +46,10 @@ const ProjectSlider = ({ images, imagePlaceholder, projectTitle }) => {
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
           className="projects__slider-image"
-          alt={projectTitle}
           key={page}
-          src={images[imageIndex]}
+          src={images.src[imageIndex]}
+          srcSet={images.srcSet[imageIndex]}
+          alt={images.alt}
           custom={direction}
           variants={variants}
           initial="enter"
@@ -73,7 +74,7 @@ const ProjectSlider = ({ images, imagePlaceholder, projectTitle }) => {
         />
       </AnimatePresence>
       <div className="projects__image-placeholder">
-        <img src={imagePlaceholder} alt={projectTitle} />
+        <img src={images.src[0]} alt={images.alt} />
         <button type="button" className="next" onClick={() => paginate(1)}>
           ⇾
         </button>
