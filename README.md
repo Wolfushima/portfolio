@@ -20,7 +20,7 @@ Working with React and Framer Motion allowed me to create dynamic and visually a
 
 ## Showcase
 
-![portfolio-gif](./readmeassets/portfolio-gif.gif)
+https://github.com/Wolfushima/portfolio/assets/75055499/68901860-a529-48a4-a1be-1815507e9ad6
 
 ## Features
 
