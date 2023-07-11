@@ -13,6 +13,7 @@ import FigmaLogo from '../assets/skills/figma-logo.svg';
 import FramerMotionLogo from '../assets/skills/framer-motion-logo.svg';
 import ReduxLogo from '../assets/skills/redux-logo.svg';
 import FirebaseLogo from '../assets/skills/firebase-logo.svg';
+import ReacRouterLogo from '../assets/skills/react-router-logo.svg';
 
 const skillBoxVariants = {
   hidden: { opacity: 0, y: 10 },
@@ -62,6 +63,7 @@ const Skills = () => (
           <SkillBox skillBoxTitle="Libraries">
             <Skill skillName="Redux" logo={ReduxLogo} />
             <Skill skillName="Framer Motion" logo={FramerMotionLogo} />
+            <Skill skillName="React Router" logo={ReacRouterLogo} />
           </SkillBox>
           <SkillBox skillBoxTitle="Backend/BaaS">
             <Skill skillName="Firebase" logo={FirebaseLogo} />
