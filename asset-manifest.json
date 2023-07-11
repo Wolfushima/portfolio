@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.e6e091b1.css",
-    "main.js": "/static/js/main.8da0a72d.js",
+    "main.css": "/static/css/main.96fa9a10.css",
+    "main.js": "/static/js/main.62ecc961.js",
     "static/media/stars-background-5177x3883.webp": "/static/media/stars-background-5177x3883.f7fc3c8204c542e57c89.webp",
     "static/media/where-is-waldo-2-1200w.webp": "/static/media/where-is-waldo-2-1200w.0f4b13ff7bfa40ac7ac1.webp",
     "static/media/where-is-waldo-3-1200w.webp": "/static/media/where-is-waldo-3-1200w.57edb6f9ed13de54d878.webp",
@@ -77,11 +77,11 @@
     "static/media/sass-logo.svg": "/static/media/sass-logo.be65d660261dc608a9ed37e9cbe3f41a.svg",
     "static/media/firebase-logo.svg": "/static/media/firebase-logo.8b3c7c37148d81488159ca16cafee38e.svg",
     "static/media/redux-logo.svg": "/static/media/redux-logo.dfd05fe17b5d5295e8f73b71ea5d9149.svg",
+    "index.html": "/index.html",
     "static/media/react-router-logo.svg": "/static/media/react-router-logo.31051feb486843c4ac241f4acf2c5cf1.svg",
     "static/media/bootstrap-logo.svg": "/static/media/bootstrap-logo.7c7b63246d6530dfdb4a42fe346d1683.svg",
     "static/media/instagram-logo.svg": "/static/media/instagram-logo.7a7ffc8d637f90fb032b8707a29aa5ad.svg",
     "static/media/github-logo.svg": "/static/media/github-logo.05dead8764fa42d3513063958a4ae3f7.svg",
-    "index.html": "/index.html",
     "static/media/git-logo.svg": "/static/media/git-logo.4c9774d77bd486b956fdb14c92018d4c.svg",
     "static/media/figma-logo.svg": "/static/media/figma-logo.b3de95804e4b5db63147dd8364961b13.svg",
     "static/media/javascript-logo.svg": "/static/media/javascript-logo.04db69b645b0e7c337bd0bd181fc8fdd.svg",
@@ -93,7 +93,7 @@
     "static/media/email-icon.svg": "/static/media/email-icon.c3d637566a42b8bdd10b09cf38477fc2.svg"
   },
   "entrypoints": [
-    "static/css/main.e6e091b1.css",
-    "static/js/main.8da0a72d.js"
+    "static/css/main.96fa9a10.css",
+    "static/js/main.62ecc961.js"
   ]
 }
