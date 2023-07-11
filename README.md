@@ -1,6 +1,6 @@
 <h1 align="center">My Personal Portfolio</h1>
 
-![portfolio-screenshot](./src/assets/projects/portfolio/portfolio1.jpg)
+![portfolio-screenshot](https://github.com/Wolfushima/portfolio/assets/75055499/f1ba942d-ff86-4ce2-840d-973958d90af5)
 
 ## Description
 
