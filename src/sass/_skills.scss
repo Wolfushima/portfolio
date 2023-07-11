@@ -59,6 +59,9 @@
     gap: 1rem;
     background-color: #fafafa;
     border-radius: 10px;
+    @include breakpoint-down(x-small) {
+      height: 100%;
+    }
   }
   &__skill {
     display: flex;
@@ -72,6 +75,11 @@
       color: #595959;
       text-align: center;
       white-space: nowrap;
+    }
+    @include breakpoint-down(x-small) {
+      p {
+        white-space: normal;
+      }
     }
   }
   &__logo {
