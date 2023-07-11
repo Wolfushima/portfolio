@@ -13,14 +13,56 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap" rel="stylesheet">
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Manrope&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    >
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    >
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    >
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    >
     <title>Adolfo Herrera - Portfolio</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Manrope&display=swap"
+        rel="stylesheet"
+        type="text/css"
+      >
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap"
+        rel="stylesheet"
+        type="text/css"
+      >
+      <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+        rel="stylesheet"
+        type="text/css"
+      >
+      <link
+        href="https://fonts.googleapis.com/css2?family=Mate+SC&display=swap"
+        rel="stylesheet"
+        type="text/css"
+      >
+      You need to enable JavaScript to run this app.
+    </noscript>
     <!-- A little help for the Netlify bots -->
     <form name="Contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
       <input type="text" name="name" />
