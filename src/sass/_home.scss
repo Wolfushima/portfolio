@@ -6,14 +6,14 @@
   background: #161d9c;
   background-image:
   linear-gradient(to right, rgb(16, 67, 142, 0.6) 0%, rgb(8, 79, 74, 0.6) 100%),
-  url('../assets/home/stars-background.jpg');
+  url('../assets/home/stars-background-1920x1440.webp');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  @include breakpoint-up(large) {
+  @include breakpoint-up(x-large) {
     background-image:
     linear-gradient(to right, rgb(16, 67, 142, 0.6) 0%, rgb(8, 79, 74, 0.6) 100%),
-    url('../assets/home/stars-background-large.jpg');
+    url('../assets/home/stars-background-5177x3883.webp');
   }
   &::after {
     content: '';
