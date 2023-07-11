@@ -78,7 +78,7 @@
       align-items: center;
       justify-content: center;
       gap: 0.7rem;
-      @include button($bg-grey-darkest);
+      @include button(#202020);
       min-width: max-content;
       padding: 0 3vw;
       width: 70%;
