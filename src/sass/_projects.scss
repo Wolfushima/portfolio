@@ -134,11 +134,21 @@
     }
   }
   &__grid &__buttons {
-    gap: 0.5rem;
+    gap: 1rem;
     a {
       height: 30px;
       width: 70px;
       font-size: $font-xsm;
+    }
+    @include breakpoint-down(x-small) {
+      a {
+        width: 90px;
+      }
+    }
+    @include breakpoint-down(xx-small) {
+      a {
+        width: 80px;
+      }
     }
   }
   &__grid &__wrapper {
@@ -215,7 +225,7 @@
     flex-direction: column;
   }
   &__description {
-    margin: 1rem 0;
+    margin: 0 0 2rem 0;
     p {
       color: #202020;
       font-family: $font-family-secondary;
@@ -247,6 +257,11 @@
       a {
         width: 90px;
         font-size: $font-xsm;
+      }
+    }
+    @include breakpoint-down(xx-small) {
+      a {
+        width: 80px;
       }
     }
   }
