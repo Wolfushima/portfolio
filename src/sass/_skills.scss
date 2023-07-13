@@ -33,7 +33,7 @@
     padding: 2rem;
     border-radius: 10px;
     @include breakpoint-down(xx-small) {
-      padding: 1rem
+      padding: 1rem;
     }
   }
   &__box {
@@ -43,6 +43,14 @@
     flex: 1;
     flex-basis: auto;
     gap: 0.5rem;
+  }
+  &__box:first-child  {
+    .skills__box-items {
+      @media (max-width: 400px) {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
   }
   &__box-title {
     font-family: $font-family-primary;
@@ -62,6 +70,7 @@
     gap: 1rem;
     background-color: #fafafa;
     border-radius: 10px;
+    flex-flow: wrap;
     @include breakpoint-down(x-small) {
       height: 100%;
     }
