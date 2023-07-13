@@ -38,16 +38,21 @@ $breakpoints-down: (
   color: #d0d2d6;
   width: 220px;
   min-width: 220px;
-  height: 40px;
+  height: 30px;
   text-align: center;
   border-radius: 30px;
-  border: 1px solid $grey-text;
+  border: 1px solid #454545;
   transition: all 0.3s ease;
+  box-shadow:
+    0 0 0 2px $bg,
+    0 0 6px 3px rgb(0 0 0 / 35%);
   &:hover {
     background: darken($bg, 3%);
     box-shadow:
       0 0 0 2px $bg,
-      0 0 6px 3px rgb(0 0 0 / 35%);
+      0 0 6px 3px rgb(0 0 0 / 35%),
+      0 0 0 3px $bg,
+      0 0 6px 5px rgb(0 0 0 / 35%);
   }
   &:active {
     background: darken($bg, 5%);
