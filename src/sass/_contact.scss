@@ -89,7 +89,7 @@
         height: $font-sm;
         width: $font-sm;
         path {
-          fill: $light-text;
+          fill: #d0d2d6;
         }
       }
       @include breakpoint-down(medium) {
@@ -142,7 +142,7 @@
       font-weight: 400;
       letter-spacing: .5px;
       line-height: normal;
-      color: $dark-grey-text;
+      color: #202020;
     }
     input:focus,
     textarea:focus {

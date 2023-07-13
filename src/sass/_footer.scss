@@ -61,7 +61,7 @@
       font-weight: 400;
       letter-spacing: 0.5px;
       line-height: normal;
-      color: #ABABAB;
+      color: #d0d2d6;
     }
     p {
       font-weight: 700;
@@ -96,7 +96,7 @@
       transition: all 0.3s ease;
       path {
         transition: all 0.3s ease;
-        fill: #ABABAB;
+        fill: #d0d2d6;
       }
     }
     @include breakpoint-down(small) {

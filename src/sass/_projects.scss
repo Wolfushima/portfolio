@@ -81,7 +81,7 @@
     background-color: #d0d2d6;
     z-index: 2;
     h3 {
-      @include h3(#3D3D3D);
+      @include h3(#202020);
       margin-bottom: 0;
     }
   }
@@ -107,7 +107,7 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 5rem;
-    background: #acb1b9;
+    background-color: #acb1b9;
     border-radius: 10px;
     padding: 5rem;
     z-index: 2;
@@ -131,12 +131,6 @@
   &__grid &__project {
     h4 {
       white-space: nowrap;
-      color: #262626;
-    }
-  }
-  &__grid &__description {
-    p {
-      color: #262626;
     }
   }
   &__grid &__buttons {
@@ -171,7 +165,7 @@
       font-family: $font-family-primary;
       font-size: $font-lg;
       font-weight: 700;
-      color: #3D3D3D;
+      color: #202020;
       letter-spacing: 1px;
       line-height: normal;
       margin-bottom: 1rem;
@@ -223,7 +217,7 @@
   &__description {
     margin: 1rem 0;
     p {
-      color: #3D3D3D;
+      color: #202020;
       font-family: $font-family-secondary;
       font-size: $font-sm;
       font-weight: 400;
@@ -340,12 +334,12 @@
       font-size: $font-xsm;
       font-weight: 400;
       letter-spacing: 1px;
-      color: $light-blue;
+      color: #202020;
       &:hover {
-        color: darken($light-blue, 3%);
+        color: darken(#202020, 3%);
       }
       &:active {
-        color: darken($light-blue, 5%);
+        color: darken(#202020, 5%);
       }
     }
   }
@@ -419,8 +413,9 @@
       padding: 2.5px 5px;
       text-align: center;
       border-radius: 5px;
-      border: 1px solid #00000029;
+      border: 1px solid #acb1b9;
       background-color: #f1f1f1;
+      color: #202020;
       min-width: 100%;
       white-space: nowrap;
     }
