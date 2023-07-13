@@ -18,7 +18,7 @@
   }
   &__logo {
     color: #ABABAB;
-    font-family: 'Mate SC', serif;
+    font-family: $font-family-secondary;
     font-size: $font-xsm;
     border: none;
     cursor: pointer;
@@ -30,7 +30,7 @@
     min-height: 2rem;
     background-color: #202020;
     border: 1px solid #454545;
-    font-weight: 900;
+    font-weight: 400;
     box-shadow: inset 0 0 0 1px #202020, inset 0 0 0 2px #454545;
     @include breakpoint-down(medium) {
       left: 3rem;
@@ -82,10 +82,11 @@
         background: none;
         border: none;
         cursor: pointer;
-        font-family: 'Montserrat', sans-serif;
+        font-family: $font-family-primary;
         transition: color 0.3s ease;
         text-transform: lowercase;
         color: #454545;
+        font-weight: 400;
         letter-spacing: 5px;
         margin-right: -5px;
         &:hover {

@@ -29,7 +29,11 @@ $breakpoints-down: (
 //BUTTON
 @mixin button($bg) {
   background: $bg;
+  font-family: $font-family-primary;
   font-size: $font-sm;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1;
   cursor: pointer;
   color: $light-text;
   width: 220px;
@@ -39,7 +43,6 @@ $breakpoints-down: (
   border-radius: 30px;
   border: 1px solid $grey-text;
   transition: all 0.3s ease;
-  font-family: 'Manrope', sans-serif;
   &:hover {
     background: darken($bg, 3%);
     box-shadow:
@@ -53,15 +56,16 @@ $breakpoints-down: (
 
 //H3 
 @mixin h3($color) {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $font-family-primary;
+  font-size: $font-xlg;
   font-weight: 700;
   letter-spacing: 5px;
+  line-height: normal;
   color: $color;
   margin-bottom: 3.5rem;
-  font-size: $font-xlg;
-    @include breakpoint-down(medium) {
-      font-size: 1.8rem;
-    }
+  @include breakpoint-down(medium) {
+    font-size: 1.8rem;
+  }
   @include breakpoint-down(small) {
     font-size: 1.6rem;
   }

@@ -56,16 +56,15 @@
     border-top: 1px solid #454545;
     padding: 1rem;
     p, span {
-      font-family: 'Manrope', sans-serif;
+      font-family: $font-family-primary;
       font-size: $font-xsm;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      line-height: normal;
       color: #ABABAB;
     }
     p {
-      font-weight: 900;
-      letter-spacing: 1px;
-    }
-    span {
-      font-weight: 100;
+      font-weight: 700;
     }
     @include breakpoint-down(small) {
       p, span {

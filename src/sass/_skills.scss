@@ -44,9 +44,11 @@
     gap: 0.5rem;
   }
   &__box-title {
-    font-family: 'Manrope', sans-serif;
-    letter-spacing: 3px;
+    font-family: $font-family-primary;
     font-size: $font-sm;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1px;
     color: #DEE0FC;
     white-space: nowrap;
   }
@@ -70,8 +72,11 @@
     justify-content: center;
     gap: 0.5rem;
     p {
-      font-family: 'Open Sans', sans-serif;
+      font-family: $font-family-secondary;
       font-size: $font-xsm;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: .5px;
       color: #595959;
       text-align: center;
       white-space: nowrap;

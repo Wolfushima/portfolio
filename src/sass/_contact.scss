@@ -51,15 +51,17 @@
   }
   &__msg {
     p {
+      font-family: $font-family-secondary;
       font-size: $font-sm;
-      font-family: 'Open Sans', sans-serif;
-      color: #DEE0FC;
+      font-weight: 400;
+      letter-spacing: 0.5px;
       line-height: 2;
+      color: #DEE0FC;
       max-width: 50ch;
     }
     :first-child {
       font-size: $font-med;
-      font-weight: 900;
+      font-weight: 700;
       letter-spacing: 1px;
     }
     @include breakpoint-down(medium) {
@@ -123,7 +125,10 @@
       align-items: flex-start;
       gap: 0.5rem;
       font-size: $font-sm;
-      font-family: 'Open Sans', sans-serif;
+      font-family: $font-family-primary;
+      font-weight: 400;
+      letter-spacing: 1px;
+      line-height: normal;
       color: #DEE0FC;
     }
     input,
@@ -133,7 +138,10 @@
       border: none;
       padding: 0.5rem;
       font-size: $font-sm;
-      font-family: 'Open Sans', sans-serif;
+      font-family: $font-family-secondary;
+      font-weight: 400;
+      letter-spacing: .5px;
+      line-height: normal;
       color: $dark-grey-text;
     }
     input:focus,
