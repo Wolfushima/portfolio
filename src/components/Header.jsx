@@ -36,6 +36,7 @@ const Header = () => {
   };
 
   const listenScrollEvent = () => {
+    setIsNavOpen(false);
     setScrollPosition(window.scrollY);
     handleHideHeader();
   };
@@ -83,6 +84,11 @@ const Header = () => {
 
   return (
     <header id="header" className={`header ${headerStyle}`}>
+      <div
+        className={`header__overlay ${
+          isNavOpen && matchesMediaQuery ? 'show-overlay' : ''
+        }`}
+      />
       <div className="header__wrapper">
         <div className="header__container">
           <button

@@ -12,6 +12,10 @@
     height: 100%;
     margin: 0 auto;
     position: relative;
+    padding: 0 5rem;
+    @include breakpoint-down(medium) {
+      padding: 0 3rem;
+    }
     @include breakpoint-down(small) {
       padding: 0 2rem;
     }
@@ -42,7 +46,7 @@
   }
   &__container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     height: 100%;
     @include breakpoint-down(small) {
@@ -59,23 +63,8 @@
     align-items: center;
     list-style: none;
     text-decoration: none;
-    justify-content: space-evenly;
-    @include breakpoint-down(small) {
-      transition: all 0.3s ease;
-      flex-direction: column;
-      justify-content: flex-start;
-      background: hsl(0deg 0% 0% / 92%);
-      backdrop-filter: blur(2px);
-      height: 100%;
-      position: absolute;
-      right: -200px;
-      top: 0;
-      padding: 80px 2rem 0 2rem;
-      height: 100vh;
-      width: 200px;
-      align-items: flex-end;
-      gap: 1rem;
-    }
+    justify-content: flex-end;
+    gap: 2rem;
     li {
       button {
         font-size: $font-xsm;
@@ -83,16 +72,43 @@
         border: none;
         cursor: pointer;
         font-family: $font-family-primary;
-        transition: color 0.3s ease;
-        text-transform: lowercase;
+        transition: all 0.3s ease;
+        text-transform: capitalize;
         color: #202020;
         font-weight: 400;
         letter-spacing: 5px;
         margin-right: -5px;
+        white-space: nowrap;
+        padding: 2.5px 5px;
+        padding-left: 10px;
+        border-radius: 10px;
         &:hover {
-          color: darken(#202020, 5%);
+          background-color: #202020;
+          color: #d0d2d6;
         }
       }
+    }
+    @include breakpoint-down(small) {
+      transition: all 0.3s ease;
+      flex-direction: column;
+      justify-content: flex-start;
+      background-color: #202020;
+      height: 100%;
+      position: absolute;
+      right: -210px;
+      top: 0;
+      padding: 80px 2rem 0 2rem;
+      height: 100vh;
+      width: 200px;
+      align-items: flex-end;
+      gap: 1rem;
+      border-bottom-left-radius: 50px;
+      height: auto;
+      padding-bottom: 80px;
+      border: 1px solid #454545;
+      box-shadow:
+        0 0 0 2px #202020,
+        0 0 6px 3px rgb(0 0 0 / 35%);
     }
   }
   ul.expanded {
@@ -100,9 +116,6 @@
     li {
       button {
         color: #d0d2d6;
-        &:hover {
-          color: darken(#d0d2d6, 5%);
-        }
       }
     }
   }
@@ -152,11 +165,6 @@
     span:nth-child(2) {
       display: none;
     }
-    &:hover {
-      span {
-        transform: scale(0.7);
-      }
-    }
   }
   &__hamburger.open {
     backdrop-filter: none;
@@ -167,6 +175,7 @@
     span:nth-child(1),
     span:nth-child(4) {
       width: 0%;
+      opacity: 0;
     }
     span:nth-child(2),
     span:nth-child(3) {
@@ -186,6 +195,19 @@
       transform: rotate(-45deg);
     }
   }
+  &__overlay {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(62 69 74 / 50%);
+    z-index: 0;
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  &__overlay.show-overlay {
+    opacity: 1;
+  }
 }
 .header.hide {
   background-color: transparent;
@@ -200,11 +222,6 @@
     li {
       button {
         color: #d0d2d6;
-        letter-spacing: 5px;
-        margin-right: -5px;
-        &:hover {
-          color: darken(#d0d2d6, 5%);
-        }
       }
     }
   }
