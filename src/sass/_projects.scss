@@ -288,8 +288,10 @@
     border: 1px solid #454545;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     transition: all 0.3s ease;
-    &:hover {
-      box-shadow: none;
+    @media (hover: hover) {
+      &:hover {
+        box-shadow: none;
+      }
     }
     .next,
     .prev {
@@ -308,7 +310,12 @@
       width: 20px;
       background-color: hsl(0deg 0% 12.55% / 50%);
       transition: all 0.3s ease;
-      &:hover {
+      @media (hover: hover) {
+        &:hover {
+          background-color: #454545;
+        }
+      }
+      &:active {
         background-color: #454545;
       }
       svg {
