@@ -287,12 +287,6 @@
     border-radius: 10px;
     border: 1px solid #454545;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    transition: all 0.3s ease;
-    @media (hover: hover) {
-      &:hover {
-        box-shadow: none;
-      }
-    }
     .next,
     .prev {
       position: absolute;
