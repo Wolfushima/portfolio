@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence, wrap } from 'framer-motion';
 import { ReactComponent as ArrowLeftIcon } from '../../assets/projects/arrow-left-icon.svg';
 import { ReactComponent as ArrowRightIcon } from '../../assets/projects/arrow-right-icon.svg';
@@ -31,6 +31,10 @@ const swipePower = (offset, velocity) => {
 
 const ProjectSlider = ({ images }) => {
   const [[page, direction], setPage] = useState([0, 0]);
+  const [hoverVariants, setHoverVariants] = useState();
+  const [isMobile, setIsMobile] = useState(
+    window.matchMedia('(max-width: 768px)').matches
+  );
 
   const imageIndex = wrap(0, images.src.length, page);
 
@@ -38,12 +42,25 @@ const ProjectSlider = ({ images }) => {
     setPage([page + newDirection, newDirection]);
   };
 
+  useEffect(() => {
+    if (!isMobile) {
+      setHoverVariants({ boxShadow: 0 });
+    } else setHoverVariants();
+    window
+      .matchMedia('(max-width: 768px)')
+      .addEventListener('change', (e) => setIsMobile(e.matches));
+
+    return () =>
+      window.removeEventListener('change', (e) => setIsMobile(e.matches));
+  }, [isMobile]);
+
   return (
     <motion.div
       className="projects__slider"
       initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0, transition: { duration: 0.5 } }}
       viewport={{ once: true }}
+      whileHover={hoverVariants}
     >
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
