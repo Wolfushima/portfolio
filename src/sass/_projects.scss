@@ -282,9 +282,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #aeadad;
-    border: 1px solid #a4a4a4;
+    background-color: #acb1b9;
     margin-bottom: 1rem;
+    border-radius: 10px;
+    border: 1px solid #454545;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    transition: all 0.3s ease;
+    &:hover {
+      box-shadow: none;
+    }
     .next,
     .prev {
       position: absolute;
@@ -293,18 +299,23 @@
       align-items: center;
       user-select: none;
       cursor: pointer;
-      font-size: $font-sm;
-      font-family: $font-family-secondary;
       z-index: 2;
       border: none;
-      background: hsl(0deg 0% 0% / 73%);
-      color: white;
-      backdrop-filter: blur(2px);
       height: 50%;
-      padding: 0.5rem;
-      box-shadow: 0px 0px 1px #5c5c5c;
+      box-shadow:
+        0 0 0 1px #454545,
+        0 0 6px 2px rgb(0 0 0 / 35%);
+      width: 20px;
+      background-color: hsl(0deg 0% 12.55% / 50%);
+      transition: all 0.3s ease;
       &:hover {
-        background: hsl(0deg 0% 0% / 76%)
+        background-color: #454545;
+      }
+      svg {
+        height: 10px;
+        path {
+          fill: #d0d2d6;
+        }
       }
     }
     .next {

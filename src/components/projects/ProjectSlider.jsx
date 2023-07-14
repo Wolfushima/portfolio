@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence, wrap } from 'framer-motion';
+import { ReactComponent as ArrowLeftIcon } from '../../assets/projects/arrow-left-icon.svg';
+import { ReactComponent as ArrowRightIcon } from '../../assets/projects/arrow-right-icon.svg';
 
 const variants = {
   enter: (direction) => {
@@ -76,10 +78,10 @@ const ProjectSlider = ({ images }) => {
       <div className="projects__image-placeholder">
         <img src={images.src[0]} alt={images.alt} />
         <button type="button" className="next" onClick={() => paginate(1)}>
-          ⇾
+          <ArrowRightIcon />
         </button>
         <button type="button" className="prev" onClick={() => paginate(-1)}>
-          ⇽
+          <ArrowLeftIcon />
         </button>
       </div>
     </motion.div>
