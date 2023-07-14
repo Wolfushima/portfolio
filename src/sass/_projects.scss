@@ -349,10 +349,11 @@
     width: fit-content;
     border: 1px solid #acb1b9;
     padding: 0.25rem 0.5rem;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #d0d2d6;
     z-index: 2;
     margin-top: 2rem;
+    transition: all 0.3s ease;
     a {
       cursor: pointer;
       text-decoration: none;
@@ -361,11 +362,11 @@
       font-weight: 400;
       letter-spacing: 1px;
       color: #202020;
-      &:hover {
-        color: darken(#202020, 3%);
-      }
-      &:active {
-        color: darken(#202020, 5%);
+    }
+    &:hover {
+      background-color: #202020;
+      a {
+        color: #d0d2d6;
       }
     }
   }
