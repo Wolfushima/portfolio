@@ -26,16 +26,7 @@ const HomeHeaders = () => (
 );
 
 const HomeContact = () => (
-  <motion.div
-    className="home__contact"
-    initial="hidden"
-    animate="visible"
-    exit={{ opacity: 0, transition: { duration: 1 } }}
-    variants={{
-      hidden: { opacity: 0, y: 10 },
-      visible: { opacity: 1, y: 0, transition: { delay: 1, duration: 0.5 } },
-    }}
-  >
+  <div className="home__contact">
     <a
       href="https://www.linkedin.com/in/adolfoherreradev/"
       className="home__contact-logo"
@@ -58,7 +49,7 @@ const HomeContact = () => (
     >
       <EmailIcon />
     </button>
-  </motion.div>
+  </div>
 );
 
 const Home = () => (
