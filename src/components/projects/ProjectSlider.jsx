@@ -94,10 +94,20 @@ const ProjectSlider = ({ images }) => {
       </AnimatePresence>
       <div className="projects__image-placeholder">
         <img src={images.src[0]} alt={images.alt} />
-        <button type="button" className="next" onClick={() => paginate(1)}>
+        <button
+          type="button"
+          className="next"
+          onClick={() => paginate(1)}
+          aria-label="Next Image"
+        >
           <ArrowRightIcon />
         </button>
-        <button type="button" className="prev" onClick={() => paginate(-1)}>
+        <button
+          type="button"
+          className="prev"
+          onClick={() => paginate(-1)}
+          aria-label="Previous Image"
+        >
           <ArrowLeftIcon />
         </button>
       </div>
