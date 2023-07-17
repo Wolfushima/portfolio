@@ -71,7 +71,7 @@
     line-height: 1.3;
     p, h1, h2 {
       font-family: $font-family-secondary;
-      font-size: $font-sm;
+      font-size: 2rem;
       color: #DEE0FC;
       letter-spacing: 5px;
       margin-right: -5px;
@@ -81,27 +81,41 @@
     h1 {
       font-family: $font-family-primary;
       font-weight: 700;
-      font-size: 2rem;
+      font-size: 5rem;
       background: transparent;
       background: linear-gradient(to right, #cbf8ff 0%, #DEE0FC 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
+    @include breakpoint-down(medium) {
+      h1 {
+        font-size: 4rem;
+      }
+      p, h2 {
+        font-size: 1.9rem;
+      }
+    }
     @include breakpoint-down(small) {
       h1 {
-        font-size: 1.7rem;
+        font-size: 3rem;
+      }
+      p, h2 {
+        font-size: 1.5rem;
       }
     }
     @include breakpoint-down(x-small) {
       h1 {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
       }
-      h2, p {
-        font-size: $font-xsm;
+      p, h2 {
+        font-size: 0.9rem;
       }
     }
     @include breakpoint-down(xx-small) {
-      h2, p {
+      h1 {
+        font-size: 1.4rem;
+      }
+      p, h2 {
         font-size: 0.7rem;
       }
     }
@@ -113,9 +127,15 @@
     align-items: center;
     gap: 1rem;
     z-index: 2;
-    top: calc(100% + 2rem); 
+    top: calc(100% + 4rem); 
+    @include breakpoint-down(medium) {
+      top: calc(100% + 3rem); 
+    }
     @include breakpoint-down(small) {
       gap: 0.5rem;
+    }
+    @include breakpoint-down(x-small) {
+      top: calc(100% + 2rem); 
     }
     @include breakpoint-down(xx-small) {
       gap: 0.1rem;
