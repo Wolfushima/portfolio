@@ -3,7 +3,7 @@
   height: 100svh;
   min-height: 500px;
   width: 100%;
-  background: #161d9c;
+  background: $color-primary-theme;
   background-image:
   linear-gradient(to right, rgb(16, 67, 142, 0.6) 0%, rgb(8, 79, 74, 0.6) 100%),
   url('../assets/home/stars-background-1920x1440.webp');
@@ -30,7 +30,7 @@
     position: absolute;
     height: 4px;
     width: 100%;
-    background-color: #242dc7;
+    background-color: $color-primary-theme;
     bottom: -2px;
     z-index: 10;
   }
@@ -72,7 +72,7 @@
     p, h1, h2 {
       font-family: $font-family-secondary;
       font-size: 2rem;
-      color: #DEE0FC;
+      color: $color-primary-theme-text;
       letter-spacing: 5px;
       margin-right: -5px;
       font-weight: 400;
@@ -82,10 +82,7 @@
       font-family: $font-family-primary;
       font-weight: 700;
       font-size: 5rem;
-      background: transparent;
-      background: linear-gradient(to right, #cbf8ff 0%, #DEE0FC 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: $color-primary-theme-contrast;
     }
     @include breakpoint-down(medium) {
       h1 {
@@ -154,7 +151,7 @@
     position: relative;
     &::after {
       content: '';
-      background-color: #DEE0FC;
+      background-color: $color-primary-theme-text;
       position: absolute;
       top: 50%;
       transition: all 0.3s ease;
@@ -189,7 +186,7 @@
       border: 1px solid transparent;
       transition: all 0.3s ease;
       path {
-        fill: #DEE0FC;
+        fill: $color-primary-theme-text;
       }
       @include breakpoint-down(small) {
         width: 1.5rem;
@@ -219,22 +216,22 @@
           &::after {
             top: 100%;
           }
-          border-bottom: 2px solid #DEE0FC;
+          border-bottom: 2px solid $color-primary-theme-text;
         }
         &:last-child {
           &::after {
             left: 0;
           }
-          border-right: 2px solid #DEE0FC;
+          border-right: 2px solid $color-primary-theme-text;
         }
         &:first-child {
           &::after {
             right: 0;
           }
-          border-left: 2px solid #DEE0FC;
+          border-left: 2px solid $color-primary-theme-text;
         }
         svg {
-          border: 1px solid #DEE0FC;
+          border: 1px solid $color-primary-theme-text;
           padding: 5px;
         }
       }

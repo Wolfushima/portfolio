@@ -1,5 +1,5 @@
 .aboutme {
-  background-color: #242dc7;
+  background-color: $color-primary-theme;
   &__wrapper {
     max-width: 1440px;
     padding: 10rem 5rem;
@@ -24,7 +24,7 @@
       position: absolute;
       width: 1px;
       height: calc(100% + 2rem);
-      background-color: #DEE0FC;
+      background-color: $color-primary-theme-border;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -46,12 +46,12 @@
   }
   &__header {
     h3 {
-      @include h3(#DEE0FC);
+      @include h3($color-primary-theme-text);
     }
   }
   &__description {
     @include breakpoint-down(x-small) {
-      border-left: 1px solid #DEE0FC;
+      border-left: 1px solid $color-primary-theme-border;
       padding-left: 1rem;
     }
     p {
@@ -59,7 +59,7 @@
       font-size: $font-sm;
       font-weight: 400;
       line-height: 2;
-      color: #DEE0FC;
+      color: $color-primary-theme-text;
       max-width: 50ch;
       letter-spacing: .5px;
     }
@@ -93,7 +93,7 @@
       font-weight: 400;
       line-height: normal;
       letter-spacing: .5px;
-      color: #DEE0FC;
+      color: $color-primary-theme-text;
       text-align: center;
       max-width: 50ch;
     }

@@ -1,5 +1,5 @@
 .contact {
-  background-color: #242dc7; 
+  background-color: $color-primary-theme; 
   &__wrapper{
     max-width: 1440px;
     padding: 10rem 5rem;
@@ -24,7 +24,7 @@
       position: absolute;
       width: 1px;
       height: calc(100% + 2rem);
-      background-color: #DEE0FC;
+      background-color: $color-primary-theme-border;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -46,7 +46,7 @@
   }
   &__header {
     h3 {
-      @include h3(#DEE0FC);
+      @include h3($color-primary-theme-text);
     }
   }
   &__msg {
@@ -56,7 +56,7 @@
       font-weight: 400;
       letter-spacing: 0.5px;
       line-height: 2;
-      color: #DEE0FC;
+      color: $color-primary-theme-text;
       max-width: 50ch;
     }
     :first-child {
@@ -70,7 +70,7 @@
       }
     }
     @include breakpoint-down(x-small) {
-      border-left: 1px solid #DEE0FC;
+      border-left: 1px solid $color-primary-theme-border;
       padding-left: 1rem;
     }
   }
@@ -80,7 +80,7 @@
       align-items: center;
       justify-content: center;
       gap: 0.7rem;
-      @include button(#202020);
+      @include button($color-dark-theme);
       min-width: max-content;
       padding: 0 3vw;
       width: 70%;
@@ -89,7 +89,7 @@
         height: $font-sm;
         width: $font-sm;
         path {
-          fill: #d0d2d6;
+          fill: $color-dark-theme-text;
         }
       }
       @include breakpoint-down(medium) {
@@ -129,11 +129,11 @@
       font-weight: 400;
       letter-spacing: 1px;
       line-height: normal;
-      color: #DEE0FC;
+      color: $color-primary-theme-text;
     }
     input,
     textarea {
-      background-color: #fafafa;
+      background-color: $color-primary-theme-contrast;
       border-radius: none;
       border: none;
       padding: 0.5rem;
@@ -142,12 +142,13 @@
       font-weight: 400;
       letter-spacing: .5px;
       line-height: normal;
-      color: #202020;
+      color: $color-light-theme-text;
+      border-radius: 2px;
     }
     input:focus,
     textarea:focus {
-      outline: 1px solid $grey-text;
-      box-shadow: 0 0 1px $grey-text;
+      outline: 2px solid $color-primary-theme-border;
+      box-shadow: 0 0 4px $color-primary-theme-border;
     }
     input {
       height: auto;

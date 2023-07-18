@@ -1,6 +1,6 @@
 .footer {
   position: relative;
-  background-color: #202020;
+  background-color: $color-dark-theme;
   /* svg margin fix */
   .svg-divider-top {
     height: 20rem;
@@ -16,11 +16,11 @@
     }
     &::before {
       top: -2px;
-      background-color: #242dc7;
+      background-color: $color-primary-theme;
     }
     &::after {
       bottom: -2px;
-      background-color: #202020;
+      background-color: $color-dark-theme;
     }
   }
   /* svg margin fix */
@@ -29,7 +29,7 @@
     height: 100%;
     width: 100%;
     transform: rotate(180deg);
-    background-color: #202020;
+    background-color: $color-dark-theme;
   }
   &__wrapper {
     max-width: 1440px;
@@ -53,7 +53,7 @@
   }
   &__author {
     cursor: alias;
-    border-top: 1px solid #454545;
+    border-top: 1px solid $color-dark-theme-border;
     padding: 1rem;
     p, span {
       font-family: $font-family-primary;
@@ -61,7 +61,7 @@
       font-weight: 400;
       letter-spacing: 0.5px;
       line-height: normal;
-      color: #d0d2d6;
+      color: $color-dark-theme-text;
     }
     p {
       font-weight: 700;
@@ -96,7 +96,7 @@
       transition: all 0.3s ease;
       path {
         transition: all 0.3s ease;
-        fill: #d0d2d6;
+        fill: $color-dark-theme-text;
       }
     }
     @include breakpoint-down(small) {
@@ -120,7 +120,7 @@
     &:hover {
       svg {
         path {
-          fill: #DEE0FC;
+          fill: $color-primary-theme-contrast;
         }
       }
     }

@@ -1,5 +1,5 @@
 .skills {
-  background-color: #242dc7;
+  background-color: $color-primary-theme;
   &__wrapper {
     max-width: 1440px;
     margin: 0 auto;
@@ -19,7 +19,7 @@
   }
   &__header {
     h3 {
-      @include h3(#DEE0FC);
+      @include h3($color-primary-theme-text);
     }
   }
   &__skills {
@@ -29,7 +29,7 @@
     gap: 1rem;
     max-width: 540px;
     align-items: stretch;
-    border: 1px solid rgb(222 224 252 / 30%);
+    border: 1px solid $color-primary-theme-border;
     padding: 2rem;
     border-radius: 10px;
     @include breakpoint-down(xx-small) {
@@ -58,7 +58,7 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: 1px;
-    color: #DEE0FC;
+    color: $color-primary-theme-text;
     white-space: nowrap;
   }
   &__box-items {
@@ -68,7 +68,7 @@
     gap: 2rem;
     padding: 1rem;
     gap: 1rem;
-    background-color: #fafafa;
+    background-color: $color-primary-theme-contrast;
     border-radius: 10px;
     flex-flow: wrap;
     @include breakpoint-down(x-small) {
@@ -88,7 +88,7 @@
       font-weight: 400;
       line-height: normal;
       letter-spacing: .5px;
-      color: #202020;
+      color: $color-light-theme-text;
       text-align: center;
       white-space: nowrap;
     }

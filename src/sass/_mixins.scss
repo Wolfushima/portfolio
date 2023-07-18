@@ -35,13 +35,13 @@ $breakpoints-down: (
   letter-spacing: 1px;
   line-height: 1;
   cursor: pointer;
-  color: #d0d2d6;
+  color: $color-dark-theme-text;
   width: 220px;
   min-width: 220px;
   height: 30px;
   text-align: center;
   border-radius: 30px;
-  border: 1px solid #454545;
+  border: 1px solid $color-dark-theme-border;
   transition: all 0.3s ease;
   box-shadow:
     0 0 0 2px $bg,

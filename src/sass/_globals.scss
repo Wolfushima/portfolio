@@ -13,8 +13,8 @@ body {
   position: relative;
   font-family: sans-serif;
   font-size: $font-sm;
-  color: $dark-grey-text;
-  background-color: whitesmoke;
+  color: $color-primary-theme-text;
+  background-color: $color-primary-theme;
   width: 100%;
   min-width: 320px;
   overflow-x: hidden;

@@ -1,5 +1,5 @@
 .projects {
-  background-color: #d0d2d6;
+  background-color: $color-light-theme;
   /* svg margin fix */
   .svg-divider-top,
   .svg-divider-bottom {
@@ -16,19 +16,19 @@
     }
     &::before {
       top: -2px;
-      background-color: #242dc7;
+      background-color: $color-primary-theme;
     }
     &::after {
       bottom: -2px;
-      background-color: #d0d2d6;
+      background-color: $color-light-theme;
     }
   }
   .svg-divider-bottom {
     &::before {
-      background-color: #d0d2d6;
+      background-color: $color-light-theme;
     }
     &::after {
-      background-color: #242dc7;
+      background-color: $color-primary-theme;
     }
   }
   /* svg margin fix */
@@ -37,7 +37,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    background-color: #242dc7;
+    background-color: $color-primary-theme;
   }
   &__shape-divider-bottom {
     transform: rotate(180deg);
@@ -59,7 +59,7 @@
       position: absolute;
       width: 1px;
       height: calc(100% - 20rem);
-      background-color: #acb1b9;
+      background-color: $color-light-theme-contrast;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -75,13 +75,13 @@
     }
   }
   &__header {
-    border: 1px solid #acb1b9;
+    border: 1px solid $color-light-theme-contrast;
     padding: 0.5rem 1rem;
     border-radius: 10px;
-    background-color: #d0d2d6;
+    background-color: $color-light-theme;
     z-index: 2;
     h3 {
-      @include h3(#202020);
+      @include h3($color-light-theme-text);
       margin-bottom: 0;
     }
   }
@@ -97,9 +97,9 @@
     }
     @include breakpoint-down(small) {
       z-index: 2;
-      background-color: #d0d2d6;
+      background-color: $color-light-theme;
       border-radius: 10px;
-      border: 1px solid #acb1b9;
+      border: 1px solid $color-light-theme-contrast;
       padding: 2rem;
     }
   }
@@ -107,7 +107,7 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 5rem;
-    background-color: #acb1b9;
+    background-color: $color-light-theme-contrast;
     border-radius: 10px;
     padding: 5rem;
     z-index: 2;
@@ -175,7 +175,7 @@
       font-family: $font-family-primary;
       font-size: $font-lg;
       font-weight: 700;
-      color: #202020;
+      color: $color-light-theme-text;
       letter-spacing: 1px;
       line-height: normal;
       margin-bottom: 1rem;
@@ -227,7 +227,7 @@
   &__description {
     margin: 0 0 2rem 0;
     p {
-      color: #202020;
+      color: $color-light-theme-text;
       font-family: $font-family-secondary;
       font-size: $font-sm;
       font-weight: 400;
@@ -249,7 +249,7 @@
       justify-content: center;
       align-items: center;
       text-decoration: none;
-      @include button(#202020);
+      @include button($color-dark-theme);
       min-width: 50px;
       width: 100px;
     }
@@ -282,10 +282,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #acb1b9;
+    background-color: $color-light-theme-contrast;
     margin-bottom: 1rem;
     border-radius: 10px;
-    border: 1px solid #454545;
+    border: 1px solid $color-light-theme-border;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     .next,
     .prev {
@@ -299,23 +299,23 @@
       border: none;
       height: 50%;
       box-shadow:
-        0 0 0 1px #454545,
+        0 0 0 1px $color-light-theme-border,
         0 0 6px 2px rgb(0 0 0 / 35%);
       width: 20px;
-      background-color: hsl(0deg 0% 12.55% / 50%);
+      background-color: hsla(0, 0%, 13%, 0.5);
       transition: all 0.3s ease;
       @media (hover: hover) {
         &:hover {
-          background-color: #454545;
+          background-color: $color-light-theme-border;
         }
       }
       &:active {
-        background-color: #454545;
+        background-color: $color-light-theme-border;
       }
       svg {
         height: 10px;
         path {
-          fill: #d0d2d6;
+          fill: $color-light-theme;
         }
       }
     }
@@ -348,10 +348,10 @@
     justify-content: center;
     align-items: center;
     width: fit-content;
-    border: 1px solid #acb1b9;
+    border: 1px solid $color-light-theme-contrast;
     padding: 0.25rem 0.5rem;
     border-radius: 10px;
-    background-color: #d0d2d6;
+    background-color: $color-light-theme;
     z-index: 2;
     margin-top: 2rem;
     transition: all 0.3s ease;
@@ -362,12 +362,12 @@
       font-size: $font-xsm;
       font-weight: 400;
       letter-spacing: 1px;
-      color: #202020;
+      color: $color-light-theme-text;
     }
     &:hover {
-      background-color: #202020;
+      background-color: $color-light-theme-text;
       a {
-        color: #d0d2d6;
+        color: $color-light-theme;
       }
     }
   }
@@ -442,9 +442,9 @@
       padding: 2.5px 5px;
       text-align: center;
       border-radius: 5px;
-      border: 1px solid #acb1b9;
-      background-color: #f1f1f1;
-      color: #202020;
+      border: 1px solid $color-light-theme-contrast;
+      background-color: $color-light-theme;
+      color: $color-light-theme-text;
       min-width: 100%;
       white-space: nowrap;
     }
