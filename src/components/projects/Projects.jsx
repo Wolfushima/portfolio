@@ -31,11 +31,11 @@ const Projects = () => {
         <div className="projects__featured">
           <Project
             verticalAlign={!matchesMediaQuery}
-            projectData={PROJECTS_DATA.studioGhibliShoppingCart}
+            projectData={PROJECTS_DATA.whereIsWaldo}
           />
           <Project
             verticalAlign={!matchesMediaQuery}
-            projectData={PROJECTS_DATA.whereIsWaldo}
+            projectData={PROJECTS_DATA.studioGhibliShoppingCart}
           />
         </div>
         <div className="projects__grid">
