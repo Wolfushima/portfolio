@@ -94,7 +94,7 @@ const Header = () => {
           <button
             type="button"
             className="header__logo"
-            onClick={() => scrollToId('home')}
+            onClick={() => scrollToId('hero')}
             aria-label="Adolfo Herrera"
           >
             AH

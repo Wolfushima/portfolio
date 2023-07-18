@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Header from './components/Header';
-import Home from './components/Home';
+import Hero from './components/Hero';
 import AboutMe from './components/AboutMe';
 import Projects from './components/projects/Projects';
 import Skills from './components/Skills';
@@ -16,7 +16,7 @@ function App() {
     <>
       <Header />
       <main>
-        <Home />
+        <Hero />
         <AboutMe />
         <Projects />
         <Skills />
