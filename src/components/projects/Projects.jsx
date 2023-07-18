@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Project from './Project';
-import projectsSkills from './projectsSkills';
 import { ReactComponent as ShapeDividerSVG } from '../../assets/projects/wave-haikei.svg';
-import PROJECTS_IMAGES from '../../data/projects/projects-images';
+import PROJECTS_DATA from '../../data/projects/projects-data';
 
 const Projects = () => {
   const [matchesMediaQuery, setMatchesMediaQuery] = useState(
@@ -32,53 +31,17 @@ const Projects = () => {
         <div className="projects__featured">
           <Project
             verticalAlign={!matchesMediaQuery}
-            projectTitle="Studio Ghibli Shopping Cart"
-            projectDescription="Studio Ghibli Shopping Cart is an e-commerce web application built using React and designed to allow users to browse, search and purchase films from the world of Studio Ghibli. I used React
-          Router to handle client-side routing and React Context API to
-          handle the users cart."
-            projectImages={PROJECTS_IMAGES.studioGhibliShoppingCart}
-            liveLink="https://wolfushima.github.io/react-shopping-cart/"
-            codeLink="https://github.com/Wolfushima/react-shopping-cart/"
-            projectSkills={projectsSkills.studioGhibliShoppingCart}
+            projectData={PROJECTS_DATA.studioGhibliShoppingCart}
           />
           <Project
             verticalAlign={!matchesMediaQuery}
-            projectTitle="Where's Waldo?"
-            projectDescription="Photo-tagging application that incorporates a backend using Firebase. The objective of the project is to find Waldo and other hidden characters within six different levels."
-            projectImages={PROJECTS_IMAGES.whereIsWaldo}
-            liveLink="https://wolfushima.github.io/where-is-waldo/"
-            codeLink="https://github.com/Wolfushima/where-is-waldo"
-            projectSkills={projectsSkills.whereIsWaldo}
+            projectData={PROJECTS_DATA.whereIsWaldo}
           />
         </div>
         <div className="projects__grid">
-          <Project
-            verticalAlign
-            projectTitle="Portfolio"
-            projectDescription="Used React and Framer Motion to create a smooth and visually engaging portfolio with reusable components and animations. Used React and Framer Motion to create a smooth and visually engaging portfolio with reusable components and animations."
-            projectImages={PROJECTS_IMAGES.portfolio}
-            liveLink="https://adolfoherrera.netlify.app/"
-            codeLink="https://github.com/Wolfushima/portfolio/"
-            projectSkills={projectsSkills.portfolio}
-          />
-          <Project
-            verticalAlign
-            projectTitle="Weather App"
-            projectDescription="Weather forecast site that uses the API OpenWeatherMap. Display current and the next 7 days forecast data for a given location."
-            projectImages={PROJECTS_IMAGES.weatherApp}
-            liveLink="https://wolfushima.github.io/weather-app/"
-            codeLink="https://github.com/Wolfushima/weather-app/"
-            projectSkills={projectsSkills.weatherApp}
-          />
-          <Project
-            verticalAlign
-            projectTitle="Battleship"
-            projectDescription="Battleship game to practice TDD with Jest. Used factory functions to create players, ships and game board objects."
-            projectImages={PROJECTS_IMAGES.battleship}
-            liveLink="https://wolfushima.github.io/battleship/"
-            codeLink="https://github.com/Wolfushima/battleship/"
-            projectSkills={projectsSkills.battleship}
-          />
+          <Project verticalAlign projectData={PROJECTS_DATA.portfolio} />
+          <Project verticalAlign projectData={PROJECTS_DATA.weatherApp} />
+          <Project verticalAlign projectData={PROJECTS_DATA.battleship} />
         </div>
         <div className="projects__showmore">
           <a href="https://github.com/Wolfushima">Show More</a>

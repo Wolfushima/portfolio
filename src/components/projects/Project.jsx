@@ -19,15 +19,7 @@ const ProjectDescription = ({ projectDescription }) => (
   </div>
 );
 
-const Project = ({
-  verticalAlign,
-  projectTitle,
-  projectImages,
-  projectDescription,
-  liveLink,
-  codeLink,
-  projectSkills,
-}) => {
+const Project = ({ verticalAlign, projectData }) => {
   const [projectClassName, setProjectClassName] = useState(
     'projects__project vertical'
   );
@@ -55,14 +47,17 @@ const Project = ({
       <div className="projects__container">
         <div className={projectClassName}>
           <div className={panelOneClassName}>
-            {verticalAlign && <h4>{projectTitle}</h4>}
-            <ProjectSlider images={projectImages} />
-            <ProjectSkillsCarousel projectSkills={projectSkills} />
+            {verticalAlign && <h4>{projectData.title}</h4>}
+            <ProjectSlider images={projectData.images} />
+            <ProjectSkillsCarousel projectSkills={projectData.skills} />
           </div>
           <div className={panelTwoClassName}>
-            {!verticalAlign && <h4>{projectTitle}</h4>}
-            <ProjectDescription projectDescription={projectDescription} />
-            <ProjectButtons liveLink={liveLink} codeLink={codeLink} />
+            {!verticalAlign && <h4>{projectData.title}</h4>}
+            <ProjectDescription projectDescription={projectData.description} />
+            <ProjectButtons
+              liveLink={projectData.liveLink}
+              codeLink={projectData.codeLink}
+            />
           </div>
         </div>
       </div>

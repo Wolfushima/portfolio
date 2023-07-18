@@ -10,7 +10,7 @@ import FramerMotionLogo from '../../assets/skills/framer-motion-logo.svg';
 import FirebaseLogo from '../../assets/skills/firebase-logo.svg';
 import ReduxLogo from '../../assets/skills/redux-logo.svg';
 
-const projectsSkills = {
+const PROJECTS_SKILLS = {
   studioGhibliShoppingCart: [
     { src: ReactLogo, alt: 'React' },
     { src: ReactRouterLogo, alt: 'React Router' },
@@ -55,4 +55,4 @@ const projectsSkills = {
   ],
 };
 
-export default projectsSkills;
+export default PROJECTS_SKILLS;
