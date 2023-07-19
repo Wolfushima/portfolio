@@ -20,7 +20,11 @@ const HeroHeaders = () => (
     variants={{ visible: { transition: { staggerChildren: 0.3 } } }}
   >
     <motion.p variants={heroVariants}>Hi, I&apos;m</motion.p>
-    <motion.h1 variants={heroVariants}>Adolfo Herrera</motion.h1>
+    <motion.h1 variants={heroVariants}>
+      ADOLFO
+      <br />
+      HERRERA
+    </motion.h1>
     <motion.h2 variants={heroVariants}>Frontend Developer</motion.h2>
   </motion.div>
 );
