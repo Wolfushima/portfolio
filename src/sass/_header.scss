@@ -55,7 +55,6 @@
     }
   }
   nav {
-    width: calc(70.9% - 2vw);
     max-width: 1440px;
   }
   ul {    
@@ -64,7 +63,7 @@
     list-style: none;
     text-decoration: none;
     justify-content: flex-end;
-    gap: 2rem;
+    gap: 1rem;
     li {
       button {
         font-size: $font-xsm;
@@ -75,13 +74,13 @@
         transition: all 0.3s ease;
         text-transform: capitalize;
         color: #202020;
-        font-weight: 400;
-        letter-spacing: 5px;
-        margin-right: -5px;
+        font-weight: 700;
+        letter-spacing: .5px;
+        margin-right: -.5px;
         white-space: nowrap;
-        padding: 2.5px 5px;
-        padding-left: 10px;
+        padding: 0.3rem 0.9rem;
         border-radius: 10px;
+        text-transform: uppercase;
         &:hover {
           background-color: $color-dark-theme;
           color: $color-dark-theme-text;
@@ -101,7 +100,6 @@
       height: 100vh;
       width: 200px;
       align-items: flex-end;
-      gap: 1rem;
       border-bottom-left-radius: 50px;
       height: auto;
       padding-bottom: 80px;
