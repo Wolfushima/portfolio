@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.4d30ded4.css",
-    "main.js": "/static/js/main.d0277f83.js",
+    "main.css": "/static/css/main.ca3ee58d.css",
+    "main.js": "/static/js/main.8b8baa4d.js",
     "static/media/stars-background-5177x3883.webp": "/static/media/stars-background-5177x3883.f7fc3c8204c542e57c89.webp",
     "static/media/where-is-waldo-2-1200w.webp": "/static/media/where-is-waldo-2-1200w.0f4b13ff7bfa40ac7ac1.webp",
     "static/media/where-is-waldo-3-1200w.webp": "/static/media/where-is-waldo-3-1200w.57edb6f9ed13de54d878.webp",
@@ -95,7 +95,7 @@
     "static/media/email-icon.svg": "/static/media/email-icon.c3d637566a42b8bdd10b09cf38477fc2.svg"
   },
   "entrypoints": [
-    "static/css/main.4d30ded4.css",
-    "static/js/main.d0277f83.js"
+    "static/css/main.ca3ee58d.css",
+    "static/js/main.8b8baa4d.js"
   ]
 }
