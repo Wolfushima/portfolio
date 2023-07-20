@@ -31,5 +31,20 @@ body {
     section.projects {
       scroll-margin-top: -20rem;
     }
+    section {
+      scroll-margin-top: -5rem;
+    }
+    section.contact,
+    section.hero {
+      scroll-margin-top: 0;
+    }
+    @include breakpoint-down(small) {
+      section.projects {
+        scroll-margin-top: -15rem;
+      }
+      section {
+        scroll-margin-top: 0rem;
+      }
+    }
   }
 }
