@@ -15,6 +15,22 @@
     linear-gradient(to right, rgb(16, 67, 142, 0.6) 0%, rgb(8, 79, 74, 0.6) 100%),
     url('../assets/hero/stars-background-5177x3883.webp');
   }
+  &__profile-pic {
+    max-width: 200px;
+    padding: 2rem;
+    background-color: rgb(36 45 199 / 27%);
+    flex: 1;
+    border: 1px solid $color-primary-theme-border;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: drop-shadow(-10px 10px 7px black);
+    }
+    @include breakpoint-down(x-small) {
+      padding: 1.5rem;
+    }
+  }
   &::after {
     content: '';
     height: 50%;
@@ -54,14 +70,22 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 5rem;
+    @include breakpoint-down(medium) {
+      padding: 0 3rem;
+    }
+    @include breakpoint-down(small) {
+      padding: 0 2rem;
+    }
   } 
   &__center {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     z-index: 2;
     position: relative;
+    gap: 2rem;
   }
   &__headers {
     display: flex;
@@ -125,14 +149,8 @@
     gap: 1rem;
     z-index: 2;
     top: calc(100% + 4rem); 
-    @include breakpoint-down(medium) {
-      top: calc(100% + 3rem); 
-    }
     @include breakpoint-down(small) {
       gap: 0.5rem;
-    }
-    @include breakpoint-down(x-small) {
-      top: calc(100% + 2rem); 
     }
     @include breakpoint-down(xx-small) {
       gap: 0.1rem;

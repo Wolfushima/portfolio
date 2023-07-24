@@ -4,6 +4,8 @@ import { ReactComponent as EmailIcon } from '../assets/contact/email-icon.svg';
 import { ReactComponent as LinkedInLogo } from '../assets/footer/linkedin-logo.svg';
 import { ReactComponent as GitHubLogo } from '../assets/skills/github-logo.svg';
 import { ReactComponent as LayeredWavesSVG } from '../assets/hero/layered-waves-haikei.svg';
+import ProfilePicDrawingImage800w from '../assets/hero/profile-pic-drawing/profile-pic-drawing-800w.webp';
+import ProfilePicDrawingImage400w from '../assets/hero/profile-pic-drawing/profile-pic-drawing-400w.webp';
 import scrollToId from '../utils/scrollToId';
 
 const heroVariants = {
@@ -62,6 +64,14 @@ const Hero = () => (
       <div className="hero__container">
         <LayeredWavesSVG className="hero__layered-waves" />
         <div className="hero__center">
+          <div className="hero__profile-pic">
+            <img
+              src={ProfilePicDrawingImage800w}
+              srcSet={`${ProfilePicDrawingImage400w} 540w,
+                ${ProfilePicDrawingImage800w} 768w`}
+              alt="Profile Pic - Original Artwork by Wolfushima"
+            />
+          </div>
           <HeroHeaders />
           <HeroContact />
         </div>
