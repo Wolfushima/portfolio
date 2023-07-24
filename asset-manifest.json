@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.6fa7ccd6.css",
-    "main.js": "/static/js/main.8b8baa4d.js",
+    "main.css": "/static/css/main.8c80d0a1.css",
+    "main.js": "/static/js/main.e6685a33.js",
     "static/media/stars-background-5177x3883.webp": "/static/media/stars-background-5177x3883.f7fc3c8204c542e57c89.webp",
     "static/media/where-is-waldo-2-1200w.webp": "/static/media/where-is-waldo-2-1200w.0f4b13ff7bfa40ac7ac1.webp",
     "static/media/where-is-waldo-3-1200w.webp": "/static/media/where-is-waldo-3-1200w.57edb6f9ed13de54d878.webp",
     "static/media/where-is-waldo-2-800w.webp": "/static/media/where-is-waldo-2-800w.e697ec1d456e66d81157.webp",
     "static/media/polar-1200w.webp": "/static/media/polar-1200w.2306a8bd1777f53e5355.webp",
     "static/media/dolphin-1200w.webp": "/static/media/dolphin-1200w.43d2c17710e0f78e906d.webp",
+    "static/media/profile-pic-drawing-800w.webp": "/static/media/profile-pic-drawing-800w.dea2dc3fde2772768693.webp",
     "static/media/where-is-waldo-3-800w.webp": "/static/media/where-is-waldo-3-800w.d2b578f634b933fd47ef.webp",
     "static/media/where-is-waldo-1-1200w.webp": "/static/media/where-is-waldo-1-1200w.1ffe366a888e4ab95e42.webp",
     "static/media/polar-800w.webp": "/static/media/polar-800w.0f237d23dc5b0e1107c7.webp",
@@ -16,6 +17,7 @@
     "static/media/stars-background-1920x1440.webp": "/static/media/stars-background-1920x1440.5a37d7e2af925dc9923e.webp",
     "static/media/bird-1200w.webp": "/static/media/bird-1200w.2aec19a15a7a6657a6bd.webp",
     "static/media/studio-ghibli-shopping-cart-10-1200w.webp": "/static/media/studio-ghibli-shopping-cart-10-1200w.17a48f4ff31d361bb52a.webp",
+    "static/media/profile-pic-drawing-400w.webp": "/static/media/profile-pic-drawing-400w.faefb34bc168df282744.webp",
     "static/media/studio-ghibli-shopping-cart-1-1200w.webp": "/static/media/studio-ghibli-shopping-cart-1-1200w.4f9efb331cd549b3116a.webp",
     "static/media/studio-ghibli-shopping-cart-2-1200w.webp": "/static/media/studio-ghibli-shopping-cart-2-1200w.b07f1e6f7725e453b446.webp",
     "static/media/where-is-waldo-2-400w.webp": "/static/media/where-is-waldo-2-400w.16eb192171436e2910a5.webp",
@@ -95,7 +97,7 @@
     "static/media/email-icon.svg": "/static/media/email-icon.c3d637566a42b8bdd10b09cf38477fc2.svg"
   },
   "entrypoints": [
-    "static/css/main.6fa7ccd6.css",
-    "static/js/main.8b8baa4d.js"
+    "static/css/main.8c80d0a1.css",
+    "static/js/main.e6685a33.js"
   ]
 }
