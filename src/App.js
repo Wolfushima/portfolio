@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Header from './components/Header';
-import Hero from './components/Hero';
+import Hero from './components/hero/Hero';
 import AboutMe from './components/AboutMe';
 import Projects from './components/projects/Projects';
 import Skills from './components/Skills';
