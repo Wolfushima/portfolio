@@ -5,7 +5,7 @@ import AboutMe from './components/aboutme/AboutMe';
 import Projects from './components/projects/Projects';
 import Skills from './components/Skills';
 import Contact from './components/contact/Contact';
-import Footer from './components/Footer';
+import Footer from './components/footer/Footer';
 
 function App() {
   useEffect(() => {
