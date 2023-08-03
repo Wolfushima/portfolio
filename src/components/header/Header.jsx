@@ -1,5 +1,9 @@
 import React, { useEffect, useState, useRef } from 'react';
-import scrollToId from '../utils/scrollToId';
+import scrollToId from '../../utils/scrollToId';
+import Nav from './Nav';
+import Hamburger from './Hamburger';
+import Logo from './Logo';
+import Overlay from './Overlay';
 
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -42,6 +46,12 @@ const Header = () => {
   };
 
   useEffect(() => {
+    window.addEventListener('scroll', listenScrollEvent);
+
+    return () => window.removeEventListener('scroll', listenScrollEvent);
+  }, []);
+
+  useEffect(() => {
     window
       .matchMedia('(max-width: 768px)')
       .addEventListener('change', (e) => setMatchesMediaQuery(e.matches));
@@ -66,12 +76,6 @@ const Header = () => {
   }, [scrollPosition]);
 
   useEffect(() => {
-    window.addEventListener('scroll', listenScrollEvent);
-
-    return () => window.removeEventListener('scroll', listenScrollEvent);
-  }, []);
-
-  useEffect(() => {
     if (isNavOpen) {
       document.querySelector('main').addEventListener('click', toggleNav);
       document.querySelector('footer').addEventListener('click', toggleNav);
@@ -84,74 +88,12 @@ const Header = () => {
 
   return (
     <header id="header" className={`header ${headerStyle}`}>
-      <div
-        className={`header__overlay ${
-          isNavOpen && matchesMediaQuery ? 'show-overlay' : ''
-        }`}
-      />
+      <Overlay isNavOpen={isNavOpen} matchesMediaQuery={matchesMediaQuery} />
       <div className="header__wrapper">
         <div className="header__container">
-          <button
-            type="button"
-            className="header__logo"
-            onClick={() => scrollToId('hero')}
-            aria-label="Adolfo Herrera"
-          >
-            AH
-          </button>
-          <nav>
-            <ul className={isNavOpen ? 'expanded' : null}>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => handleLiClick('aboutme')}
-                  aria-label="About Me"
-                >
-                  About Me
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => handleLiClick('projects')}
-                  aria-label="Projects"
-                >
-                  Projects
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => handleLiClick('skills')}
-                  aria-label="Skills"
-                >
-                  Skills
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => handleLiClick('contact')}
-                  aria-label="Contact"
-                >
-                  Contact
-                </button>
-              </li>
-            </ul>
-          </nav>
-          <button
-            type="button"
-            className={
-              isNavOpen ? 'header__hamburger open' : 'header__hamburger button'
-            }
-            onClick={toggleNav}
-            aria-label="Hamburger Menu"
-          >
-            <span />
-            <span />
-            <span />
-            <span />
-          </button>
+          <Logo />
+          <Nav isNavOpen={isNavOpen} handleLiClick={handleLiClick} />
+          <Hamburger isNavOpen={isNavOpen} toggleNav={toggleNav} />
         </div>
       </div>
     </header>
