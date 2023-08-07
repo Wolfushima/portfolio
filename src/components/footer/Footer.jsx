@@ -13,9 +13,21 @@ const Footer = () => (
     <div className="footer__wrapper">
       <div className="footer__container">
         <div className="footer__contact">
-          <FooterIcon iconSVG={<LinkedInLogoSVG />} ariaLabel="LinkedIn" />
-          <FooterIcon iconSVG={<GitHubLogoSVG />} ariaLabel="GitHub" />
-          <FooterIcon iconSVG={<InstagramLogoSVG />} ariaLabel="Instagram" />
+          <FooterIcon
+            linkTo="https://www.linkedin.com/in/adolfoherreradev/"
+            iconSVG={<LinkedInLogoSVG />}
+            ariaLabel="LinkedIn"
+          />
+          <FooterIcon
+            linkTo="https://github.com/Wolfushima"
+            iconSVG={<GitHubLogoSVG />}
+            ariaLabel="GitHub"
+          />
+          <FooterIcon
+            linkTo="https://www.instagram.com/wolfushima/"
+            iconSVG={<InstagramLogoSVG />}
+            ariaLabel="Instagram"
+          />
         </div>
         <div className="footer__author">
           <p>

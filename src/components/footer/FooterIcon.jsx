@@ -1,11 +1,8 @@
 import React from 'react';
 
-const FooterIcon = ({ iconSVG, ariaLabel }) => (
+const FooterIcon = ({ iconSVG, ariaLabel, linkTo }) => (
   <div className="footer__icon">
-    <a
-      href="https://www.linkedin.com/in/adolfoherreradev/"
-      aria-label={ariaLabel}
-    >
+    <a href={linkTo} aria-label={ariaLabel}>
       {iconSVG}
     </a>
   </div>
